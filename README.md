@@ -85,10 +85,12 @@ milestone2/
 | Staggered entrance animation (ego → bridges → candidates) | Live |
 | Drag nodes to explore connections | Live |
 | Hover tooltips on nodes | Live |
-| Filter by shared country / age group (AND/OR) | Live |
+| Filter by shared country / age group / gender (AND/OR) | Live |
 | Candidate ranking by score + mutual friends | Live |
-| Bridge friend spotlight | Live |
+| Bridge friend spotlight with path glow | Live |
 | 6 animated D3 atlas charts | Live |
+| Story Mode: guided A → B → C overlay walkthrough | Live |
+| Find a Match wizard: persona selector + live mini force graph + multi-path fan reveal | Live |
 | Music-taste filter | Planned (needs user listening data) |
 
 ---
@@ -100,6 +102,13 @@ Source: Zenodo — [10.5281/zenodo.10694369](https://zenodo.org/records/10694369
 Published: February 2024, University of Pisa / CNR
 
 `ArtistTags` (246 MB) is excluded from this repo — download from Zenodo if needed.
+
+---
+
+## Process book
+
+`process_book.html` at the repo root is the Milestone 3 process book (8 pages, A4 print-ready).
+Open it in any browser, then use **File → Print → Save as PDF** to produce the PDF for submission.
 
 ---
 

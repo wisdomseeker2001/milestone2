@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Process Book — Second-Degree Connection Explorer</title>
+  <style>
+    @page { size: A4; margin: 16mm; }
+
+    :root {
+      --paper:       #fbf8f2;
+      --ink:         #1a1a18;
+      --muted:       #5a5a54;
+      --accent:      #1a6b64;
+      --accent-soft: #d8ebe8;
+      --sky:         #3d6491;
+      --coral:       #c0613a;
+      --line:        #dcd7cc;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #e8e3d8;
+      color: var(--ink);
+      font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+      font-size: 10.5pt;
+      line-height: 1.5;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 8mm auto;
+      padding: 16mm 18mm;
+      background: var(--paper);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+      page-break-after: always;
+      position: relative;
+    }
+    .page:last-child { page-break-after: auto; }
+
+    /* ── Typography ── */
+    h1 { font-size: 26pt; font-weight: 700; line-height: 1.15; color: var(--ink); }
+    h2 { font-size: 13pt; font-weight: 700; color: var(--accent); margin: 18pt 0 6pt; border-bottom: 1px solid var(--line); padding-bottom: 3pt; }
+    h3 { font-size: 10.5pt; font-weight: 700; color: var(--ink); margin: 12pt 0 4pt; }
+    p  { margin-bottom: 7pt; }
+    ul, ol { padding-left: 16pt; margin-bottom: 7pt; }
+    li { margin-bottom: 3pt; }
+    strong { color: var(--ink); }
+
+    /* ── Eyebrow labels ── */
+    .eyebrow {
+      font-family: "DM Sans", "Helvetica Neue", sans-serif;
+      font-size: 7.5pt;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 6pt;
+    }
+
+    /* ── Cover ── */
+    .cover-meta {
+      font-family: "DM Sans", "Helvetica Neue", sans-serif;
+      font-size: 9pt;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-top: 10pt;
+    }
+    .cover-rule {
+      width: 48pt;
+      height: 3pt;
+      background: var(--accent);
+      margin: 16pt 0;
+      border-radius: 2pt;
+    }
+    .cover-abstract {
+      font-size: 10pt;
+      color: var(--muted);
+      max-width: 130mm;
+      line-height: 1.7;
+      margin-top: 14pt;
+    }
+    .cover-bottom {
+      position: absolute;
+      bottom: 16mm;
+      left: 18mm;
+      right: 18mm;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      font-family: "DM Sans", "Helvetica Neue", sans-serif;
+      font-size: 8pt;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      padding-top: 6pt;
+    }
+    .toc-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 6pt;
+    }
+    .toc-list li {
+      display: flex;
+      justify-content: space-between;
+      padding: 4pt 0;
+      border-bottom: 1px dotted var(--line);
+      font-size: 10pt;
+    }
+    .toc-list li span { color: var(--muted); }
+
+    /* ── Two-column layout ── */
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16pt; }
+    .two-col-3-7 { display: grid; grid-template-columns: 3fr 7fr; gap: 14pt; align-items: start; }
+
+    /* ── Callout box ── */
+    .callout {
+      background: var(--accent-soft);
+      border-left: 3pt solid var(--accent);
+      padding: 8pt 10pt;
+      border-radius: 3pt;
+      margin: 10pt 0;
+      font-size: 9.5pt;
+    }
+    .callout strong { color: var(--accent); }
+
+    /* ── Figure ── */
+    figure {
+      margin: 10pt 0;
+      text-align: center;
+    }
+    figure img {
+      max-width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 4pt;
+    }
+    figcaption {
+      font-size: 8pt;
+      color: var(--muted);
+      margin-top: 4pt;
+      font-style: italic;
+    }
+
+    /* ── Sketch embed ── */
+    .sketch-box {
+      border: 1px solid var(--line);
+      border-radius: 4pt;
+      padding: 6pt;
+      background: white;
+    }
+    .sketch-box img, .sketch-box object {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ── Color chips ── */
+    .chip-row { display: flex; gap: 8pt; flex-wrap: wrap; margin: 6pt 0; }
+    .chip {
+      display: flex; align-items: center; gap: 5pt;
+      font-size: 8.5pt;
+      font-family: "DM Sans", sans-serif;
+    }
+    .chip-dot { width: 10pt; height: 10pt; border-radius: 50%; flex-shrink: 0; }
+
+    /* ── Stat grid ── */
+    .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8pt; margin: 8pt 0; }
+    .stat-card {
+      background: var(--accent-soft);
+      border-radius: 4pt;
+      padding: 8pt 10pt;
+      text-align: center;
+    }
+    .stat-card .val {
+      font-size: 16pt;
+      font-weight: 700;
+      color: var(--accent);
+      display: block;
+      line-height: 1.1;
+    }
+    .stat-card .lbl { font-size: 7.5pt; color: var(--muted); margin-top: 2pt; }
+
+    /* ── Peer table ── */
+    table { width: 100%; border-collapse: collapse; font-size: 9.5pt; margin-top: 8pt; }
+    th {
+      background: var(--accent);
+      color: white;
+      padding: 6pt 8pt;
+      text-align: left;
+      font-family: "DM Sans", sans-serif;
+      font-size: 8.5pt;
+      font-weight: 600;
+    }
+    td { padding: 6pt 8pt; border-bottom: 1px solid var(--line); vertical-align: top; }
+    tr:nth-child(even) td { background: var(--accent-soft); }
+
+    /* ── Footer ── */
+    .footer {
+      position: absolute;
+      bottom: 10mm;
+      left: 18mm;
+      right: 18mm;
+      display: flex;
+      justify-content: space-between;
+      font-family: "DM Sans", "Helvetica Neue", sans-serif;
+      font-size: 7.5pt;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      padding-top: 4pt;
+    }
+
+    /* ── Decision table ── */
+    .decision-row {
+      display: grid;
+      grid-template-columns: 2fr 3fr;
+      gap: 10pt;
+      padding: 8pt 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .decision-row:last-child { border-bottom: none; }
+    .decision-q { font-weight: 700; font-size: 9.5pt; color: var(--ink); }
+    .decision-a { font-size: 9.5pt; color: var(--muted); }
+
+    @media print {
+      body { background: white; }
+      .page { box-shadow: none; margin: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════════════════ -->
+<!-- PAGE 1: COVER                                                      -->
+<!-- ══════════════════════════════════════════════════════════════════ -->
+<div class="page">
+  <p class="eyebrow">COM-480 Data Visualization &nbsp;·&nbsp; EPFL &nbsp;·&nbsp; Spring 2026</p>
+  <div style="margin-top: 28pt;">
+    <h1>Second-Degree<br>Connection Explorer</h1>
+    <p style="font-size:13pt; color:var(--muted); margin-top:6pt; font-style:italic;">Process Book</p>
+  </div>
+
+  <div class="cover-rule"></div>
+
+  <div class="cover-meta">
+    <strong>Team</strong><br>
+    Ahmed Chaouachi &nbsp;&nbsp;346447<br>
+    Shin Urech &nbsp;&nbsp;327245<br>
+    Joyti Goel &nbsp;&nbsp;325374
+  </div>
+
+  <p class="cover-abstract" style="margin-top:20pt;">
+    This book documents how our team designed, built, and iterated on a
+    D3.js network visualization that answers one question: who is one
+    meaningful mutual-friend step away from you, and why does the
+    introduction matter? We trace the journey from first sketches to a
+    fully interactive static site, explaining every major design decision
+    and the data challenges we encountered along the way.
+  </p>
+
+  <div style="margin-top: 24pt;">
+    <p class="eyebrow">Contents</p>
+    <ul class="toc-list">
+      <li>The Question and the Dataset <span>2</span></li>
+      <li>From Sketches to Prototype <span>3</span></li>
+      <li>The Explorer: Design Decisions <span>4</span></li>
+      <li>Story Mode and Find a Match <span>5</span></li>
+      <li>Data Challenges and Findings <span>6</span></li>
+      <li>Technical Implementation <span>7</span></li>
+      <li>Peer Assessment <span>8</span></li>
+    </ul>
+  </div>
+
+  <div class="cover-bottom">
+    <span>Second-Degree Connection Explorer &nbsp;·&nbsp; Milestone 3 &nbsp;·&nbsp; May 2026</span>
+    <span>1 / 8</span>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════════════ -->
+<!-- PAGE 2: QUESTION AND DATASET                                        -->
+<!-- ══════════════════════════════════════════════════════════════════ -->
+<div class="page">
+  <p class="eyebrow">The Question and the Dataset</p>
+
+  <h2>Why second-degree connections?</h2>
+  <p>
+    Most social platforms show you who you already know. The interesting
+    question is who you <em>could</em> know: the friends of your friends
+    who share something meaningful with you but whom you have never met.
+    These second-degree connections are the ones most likely to become
+    real friendships, precisely because a trusted mutual friend can make
+    the introduction.
+  </p>
+  <p>
+    Our central question is: <strong>"Who is one meaningful mutual-friend
+    step away from me, and why does it matter?"</strong> This question
+    guided every design decision, from the ring layout of the force graph
+    to the three-screen Find a Match wizard.
+  </p>
+
+  <h2>The Last.fm UK User Graph</h2>
+  <p>
+    We used the Last.fm UK User Graph dataset (Zenodo DOI 10.5281/zenodo.10694369),
+    a real anonymised social network scraped from the Last.fm music platform.
+    The dataset contains undirected friendship edges and per-user demographic
+    attributes.
+  </p>
+
+  <div class="stat-grid">
+    <div class="stat-card"><span class="val">75,969</span><p class="lbl">connected users</p></div>
+    <div class="stat-card"><span class="val">389,639</span><p class="lbl">unique friendships</p></div>
+    <div class="stat-card"><span class="val">5</span><p class="lbl">median degree</p></div>
+    <div class="stat-card"><span class="val">166</span><p class="lbl">median 2nd-degree reach</p></div>
+    <div class="stat-card"><span class="val">43</span><p class="lbl">median both-trait 2nd-degree</p></div>
+    <div class="stat-card"><span class="val">99.9%</span><p class="lbl">users based in UK</p></div>
+  </div>
+
+  <p>
+    Each user record carries four demographic fields: country, age group
+    (10s, 20s, 30s, 40s, 50s, 60+), gender, and playcount. Notably, the
+    dataset does not contain a per-user listening history table, which
+    ruled out music-taste matching as a filter (see page 6).
+  </p>
+
+  <h2>What the data taught us early</h2>
+  <p>
+    Our Milestone 1 EDA revealed two structural properties that shaped
+    the entire design:
+  </p>
+  <ul>
+    <li>
+      <strong>The second ring is large.</strong> The median user has only
+      5 direct friends but 166 friends-of-friends, making the second
+      degree the dominant opportunity space.
+    </li>
+    <li>
+      <strong>Attribute overlap is meaningful.</strong> The median user shares
+      both country and age group with 43 of their second-degree candidates.
+      Across all direct friendships, 69% of friends share the ego's age group,
+      confirming strong homophily even at the first hop.
+    </li>
+  </ul>
+
+  <div class="callout">
+    <strong>Design consequence.</strong> The visualization places the ego
+    at the center, direct friends in the first ring, and candidates in
+    the second ring. The sizing ratio (5 vs. 166) is why the second ring
+    is always visually dominant and why candidate filtering matters.
+  </div>
+
+  <div class="footer">
+    <span>Second-Degree Connection Explorer &nbsp;·&nbsp; Process Book</span>
+    <span>2 / 8</span>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════════════ -->
+<!-- PAGE 3: FROM SKETCHES TO PROTOTYPE                                 -->
+<!-- ══════════════════════════════════════════════════════════════════ -->
+<div class="page">
+  <p class="eyebrow">From Sketches to Prototype</p>
+
+  <h2>Milestone 1 wireframes</h2>
+  <p>
+    In Milestone 1 we produced two wireframes that defined the core
+    interaction vocabulary. Both survive almost unchanged in the final product.
+  </p>
+
+  <div class="two-col" style="margin-top:8pt;">
+    <div>
+      <div class="sketch-box">
+        <img src="sketches/dashboard_wireframe.svg" alt="Dashboard wireframe">
+      </div>
+      <p style="font-size:8pt; color:var(--muted); margin-top:4pt; font-style:italic;">
+        Dashboard wireframe: ego at center, two concentric rings, sidebar
+        filters, ranked candidate list.
+      </p>
+    </div>
+    <div>
+      <div class="sketch-box">
+        <img src="sketches/network_story_wireframe.svg" alt="Story mode wireframe">
+      </div>
+      <p style="font-size:8pt; color:var(--muted); margin-top:4pt; font-style:italic;">
+        Story mode wireframe: A→B→C three-panel guided walkthrough of
+        a single introduction path.
+      </p>
+    </div>
+  </div>
+
+  <h2>What changed from sketch to final</h2>
+
+  <div class="decision-row">
+    <div class="decision-q">Sidebar candidate list</div>
+    <div class="decision-a">
+      Moved below the graph into a separate ranked panel. The sidebar was too
+      narrow for chip badges and score bars at typical viewport widths.
+    </div>
+  </div>
+  <div class="decision-row">
+    <div class="decision-q">Music taste filter</div>
+    <div class="decision-a">
+      Shown as a disabled "coming soon" checkbox. The dataset does not include
+      per-user listening history, so the filter cannot be computed from available
+      files alone.
+    </div>
+  </div>
+  <div class="decision-row">
+    <div class="decision-q">Three-panel story mode</div>
+    <div class="decision-a">
+      Became a single overlay with sequential slides rather than three side-by-side
+      panels. The overlay avoids layout reflow and keeps the background graph visible.
+    </div>
+  </div>
+  <div class="decision-row">
+    <div class="decision-q">Atlas section</div>
+    <div class="decision-a">
+      Added below the Explorer: six animated D3 bar charts (degree distribution,
+      second-degree distribution, shared-trait histogram, age groups, top countries,
+      case comparison). Not in the original sketch but essential for contextualising
+      the exemplar cases against the full dataset.
+    </div>
+  </div>
+  <div class="decision-row">
+    <div class="decision-q">Find a Match wizard</div>
+    <div class="decision-a">
+      Entirely new feature added in Milestone 3. A nav-bar button opens a
+      three-screen modal: persona selection, search with a live force graph,
+      and a path-reveal screen showing all N bridge paths simultaneously.
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>Second-Degree Connection Explorer &nbsp;·&nbsp; Process Book</span>
+    <span>3 / 8</span>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════════════ -->
+<!-- PAGE 4: THE EXPLORER — DESIGN DECISIONS                            -->
+<!-- ══════════════════════════════════════════════════════════════════ -->
+<div class="page">
+  <p class="eyebrow">The Explorer: Design Decisions</p>
+
+  <h2>Color encoding</h2>
+  <p>
+    Three node types carry the semantic weight of the visualization. The color
+    assignment is intentional: teal (associated with the self/center) for the
+    ego, sky-blue (calm, supportive) for bridge friends, coral (warm,
+    inviting) for candidates.
+  </p>
+
+  <div class="chip-row">
+    <div class="chip"><div class="chip-dot" style="background:#1aa89d;"></div> Ego user (you)</div>
+    <div class="chip"><div class="chip-dot" style="background:#6b8ec6;"></div> Bridge friends (1st hop)</div>
+    <div class="chip"><div class="chip-dot" style="background:#ef8c59;"></div> Candidates (2nd hop)</div>
+    <div class="chip"><div class="chip-dot" style="background:#7a70d8;"></div> Active path highlight</div>
+  </div>
+
+  <h2>Ring layout rationale</h2>
+  <p>
+    The D3 force simulation uses <code>forceRadial</code> to assign each node
+    group a target orbit radius: ego fixed at center, bridges at R=170px,
+    candidates at R=325px. This keeps the two-hop structure legible even as
+    physics forces allow natural spacing within each ring.
+  </p>
+  <p>
+    An important consequence: edges in this layout carry directional meaning
+    even though the graph is undirected. Every edge visible on screen is a
+    potential introduction path. This makes the graph readable as a story
+    rather than as a hairball.
+  </p>
+
+  <h2>Candidate scoring and ranking</h2>
+  <p>
+    Each second-degree candidate is scored as:
+  </p>
+  <div class="callout" style="font-family: monospace; font-size: 9pt;">
+    score = (mutual friends &times; 2) + same_country + same_age_group + same_gender
+  </div>
+  <p>
+    Mutual friends are weighted double because they represent multiple independent
+    introduction paths. Shared attributes add context but are secondary to structural
+    connectivity. The slider cap (default 12 visible candidates) prevents the outer
+    ring from becoming unreadable at high filter settings.
+  </p>
+
+  <h2>Bridge friend highlighting</h2>
+  <p>
+    Hovering a candidate dims all other nodes and draws glowing edges from the ego
+    through the relevant bridge friends to that candidate. Clicking locks the
+    selection and opens the detail panel, which names each bridge friend and explains
+    which shared attributes make the match strong.
+  </p>
+  <p>
+    This interaction was the hardest to tune. Early versions highlighted too many
+    nodes at once (all candidates reachable through the same bridge). The final design
+    highlights only the path relevant to the hovered or selected candidate, keeping
+    attention focused.
+  </p>
+
+  <h2>Filter logic: ANY vs. ALL</h2>
+  <p>
+    The Explorer offers a toggle between "match any checked trait" and "match all
+    checked traits." This matters because the dataset is demographically homogeneous
+    (99.9% UK, heavily 20s): "match all" with two attributes often returns the
+    same result as "match any." Surfacing this to the user makes the homophily
+    finding visible rather than hiding it behind a single mode.
+  </p>
+
+  <div class="footer">
+    <span>Second-Degree Connection Explorer &nbsp;·&nbsp; Process Book</span>
+    <span>4 / 8</span>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════════════ -->
+<!-- PAGE 5: STORY MODE AND FIND A MATCH                                -->
+<!-- ══════════════════════════════════════════════════════════════════ -->
+<div class="page">
+  <p class="eyebrow">Story Mode and Find a Match</p>
+
+  <h2>Story Mode</h2>
+  <p>
+    The M1 story wireframe showed A, B, and C in separate side-by-side panels.
+    In implementation we collapsed this into a single full-screen overlay with
+    sequential slides. The redesign has three advantages:
+  </p>
+  <ul>
+    <li>The background graph remains visible, keeping spatial context.</li>
+    <li>The overlay pattern (blur backdrop, slide-up animation) is already
+        established in the UI, so Story Mode feels native rather than jarring.</li>
+    <li>Sequential slides allow narrated pacing, which is closer to a
+        presentation than a dashboard view.</li>
+  </ul>
+  <p>
+    Each story slide uses the same SVG helper functions as the rest of the
+    application, so nodes and edges are rendered consistently across Explorer,
+    Story Mode, and Find a Match.
+  </p>
+
+  <h2>Find a Match: a new feature for Milestone 3</h2>
+  <p>
+    Find a Match is a three-screen wizard accessible from the nav bar. It
+    reframes the visualization from a researcher's tool into an emulation of
+    a real friend-recommendation product.
+  </p>
+
+  <h3>Screen 1: Persona selection</h3>
+  <p>
+    The user picks which of the three exemplar ego users to "be." Each card
+    shows age, gender, country, direct-friend count, and second-degree reach.
+    This screen sets up the social context before any search begins.
+  </p>
+
+  <h3>Screen 2: Search with a live force graph</h3>
+  <p>
+    Instead of a static card grid, search results appear as a mini force graph
+    inside the panel: ego at center, bridge friends in the middle ring, matching
+    candidates in the outer ring. No edges are drawn by default. Hovering a
+    candidate node draws the exact paths (ego to bridge, bridge to candidate)
+    and dims all irrelevant nodes. This keeps the graph from being a visual
+    mess while making the structural insight immediately tangible.
+  </p>
+  <p>
+    Filters (age group, gender, mutual friends count) narrow the candidate
+    pool live; the graph re-renders with each change.
+  </p>
+
+  <h3>Screen 3: Path reveal</h3>
+  <p>
+    Clicking a candidate animates Screen 3 into view with a rise effect. The
+    SVG shows a fan diagram: ego on the left, all N bridge friends stacked
+    vertically in the middle, the candidate on the right. If there are 4 mutual
+    friends, 4 paths are drawn simultaneously, making it immediately clear that
+    the user has 4 different people who could make this introduction.
+  </p>
+
+  <div class="callout">
+    <strong>Design insight.</strong> The fan diagram emerged from a key data
+    finding: some candidates share 4 or more mutual friends. Showing only the
+    "best" bridge (as the original design did) hides this richness. Multiple
+    paths mean multiple low-risk ways to reach out, which is exactly the
+    practical value of second-degree recommendations.
+  </div>
+
+  <div class="footer">
+    <span>Second-Degree Connection Explorer &nbsp;·&nbsp; Process Book</span>
+    <span>5 / 8</span>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════════════ -->
+<!-- PAGE 6: DATA CHALLENGES AND FINDINGS                               -->
+<!-- ══════════════════════════════════════════════════════════════════ -->
+<div class="page">
+  <p class="eyebrow">Data Challenges and Findings</p>
+
+  <h2>Challenge 1: Music taste is not in the dataset</h2>
+  <p>
+    Our M1 sketches and the M2 writeup both envisioned a music-taste filter
+    based on artist-tag overlap. The raw dataset does include an
+    <code>ArtistTags</code> file (246 MB) and an <code>ArtistsMap</code> file,
+    but there is no user-to-artist listening table in the available workspace.
+    Without a table linking users to artists they have listened to, tag overlap
+    cannot be computed at the user level.
+  </p>
+  <p>
+    We exposed this limitation honestly: the music-taste filter appears in
+    the Explorer as a clearly labeled disabled checkbox, and the site's caveat
+    strip explains the reason. This was the right call: a fake filter that
+    returns arbitrary results would undermine trust in the entire visualization.
+  </p>
+
+  <h2>Challenge 2: Social homophily</h2>
+  <p>
+    The dataset is 99.9% UK users, making the country filter cosmetically
+    interesting but analytically redundant. More subtly, we discovered that
+    even with a 50-candidate pool per ego user, almost all second-degree
+    candidates share the ego's own age group. This is social homophily: people
+    tend to befriend demographically similar people, and that similarity
+    propagates two hops out.
+  </p>
+  <p>
+    Rather than hiding this, we built it into the narrative. The Find a Match
+    wizard makes homophily tangible: select a 10s ego user and all candidates
+    are also 10s; select a 20s user and the same happens. The mutual-friends
+    filter is the one dimension that genuinely differentiates candidates within
+    the same demographic cluster.
+  </p>
+
+  <div class="callout">
+    <strong>Finding.</strong> Across the three ego cases, 92% of finder
+    candidates share the ego's age group (138 out of 150). The friend age-group
+    match rate across the full dataset is 69%, meaning homophily is even stronger
+    in the second-degree layer than in direct friendships. This is an honest
+    data story, not a visualization flaw.
+  </div>
+
+  <h2>Challenge 3: Bridge candidates computed from a small pool</h2>
+  <p>
+    The Python build pipeline pre-computes the top 16 candidates per ego user
+    for the Explorer graph. The Find a Match wizard needed 50 candidates for
+    richer filtering. When we expanded the pool, we discovered that the
+    <code>bridge_candidates</code> field on each direct friend only listed
+    candidates from the original 16. Candidates in positions 17 to 50 had no
+    bridge nodes in the graph and therefore showed no hover paths.
+  </p>
+  <p>
+    The fix was to build the bridge node set from the candidates' own
+    <code>mutual_friend_ids</code> field rather than from the bridges'
+    <code>bridge_candidates</code> list. This ensures every candidate in the
+    larger pool has a bridge path available, regardless of which pool it was
+    computed from.
+  </p>
+
+  <h2>Challenge 4: Pre-computation and exemplar selection</h2>
+  <p>
+    The full adjacency graph (75,969 nodes, 389,639 edges) cannot be loaded
+    in a browser. We resolved this by selecting three exemplar ego users that
+    each represent a distinct demographic profile and degree range, then
+    pre-computing their full ego cases (16 Explorer candidates + 50 finder
+    candidates each) in a Python build script. The results are baked into a
+    single static JSON file and served from GitHub Pages with no backend.
+    Focusing the interactive experience on three well-chosen personas is a
+    deliberate storytelling decision: it keeps every interaction purposeful
+    and lets the narrative stay focused on the second-degree concept rather
+    than on data exploration for its own sake.
+  </p>
+
+  <div class="footer">
+    <span>Second-Degree Connection Explorer &nbsp;·&nbsp; Process Book</span>
+    <span>6 / 8</span>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════════════ -->
+<!-- PAGE 7: TECHNICAL IMPLEMENTATION                                    -->
+<!-- ══════════════════════════════════════════════════════════════════ -->
+<div class="page">
+  <p class="eyebrow">Technical Implementation</p>
+
+  <h2>Architecture overview</h2>
+  <p>
+    The site is a fully static HTML/CSS/JavaScript application with no backend
+    or build tool. D3.js v7 is loaded via CDN. Data is embedded as a JavaScript
+    global (<code>window.MILESTONE_DATA</code>) in <code>docs/data.js</code>
+    and is generated by a Python build pipeline. Deployment is via GitHub Pages
+    from the <code>/docs</code> folder.
+  </p>
+
+  <h3>Python build pipeline</h3>
+  <p>
+    Raw data lives in <code>data/</code> (network edge list, user demographics).
+    Two source modules in <code>src/</code> handle all graph computation:
+  </p>
+  <ul>
+    <li><code>music_data_utils.py</code>: loads and cleans the raw files using
+        pandas, computes age groups, normalises country codes.</li>
+    <li><code>second_degree_utils.py</code>: builds the adjacency dict, computes
+        second-degree reach per user, selects exemplar users, and assembles the
+        full ego-case payload (user profile, direct friends, candidates, edges).</li>
+  </ul>
+  <p>
+    <code>milestone2/build_milestone2_assets.py</code> calls both modules, assembles
+    the full JSON bundle, and writes it to
+    <code>milestone2/data/analysis_summary.json</code>. A separate step copies this
+    into <code>docs/data.js</code> as a JS global assignment.
+  </p>
+
+  <h3>D3.js force graph</h3>
+  <p>
+    The network graph uses <code>d3.forceSimulation</code> with four forces:
+    <code>forceRadial</code> (ring structure), <code>forceManyBody</code>
+    (repulsion), <code>forceLink</code> (edge tension), and
+    <code>forceCollide</code> (overlap prevention). The ego node is fixed at
+    the SVG center via <code>fx</code>/<code>fy</code>.
+  </p>
+  <p>
+    SVG layers are ordered: ring guides, pulse ring, edges, nodes, labels,
+    legend. This order ensures hover highlights are always visible and glowing
+    edges render above static edges without z-index hacks.
+  </p>
+
+  <h3>Find a Match mini graph</h3>
+  <p>
+    The finder's mini graph uses the same D3 force simulation approach but
+    runs 300 synchronous ticks (instead of an animated loop) to reach a stable
+    layout immediately. Hover interactions are handled via D3 event listeners
+    on SVG circle elements: <code>mouseenter</code> draws path lines and dims
+    non-relevant nodes, <code>mouseleave</code> clears them.
+    Clicking a candidate node triggers a CSS <code>riseUp</code> keyframe
+    animation on Screen 3 before it is shown.
+  </p>
+
+  <h3>Static site advantages and trade-offs</h3>
+
+  <div class="two-col">
+    <div>
+      <h3 style="color:var(--accent);">Advantages</h3>
+      <ul>
+        <li>Zero hosting cost (GitHub Pages)</li>
+        <li>No server-side failures or latency</li>
+        <li>Works offline after first load</li>
+        <li>Trivial to share a direct URL</li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="color:var(--coral);">Considerations</h3>
+      <ul>
+        <li>Three exemplar personas chosen by design, not arbitrary</li>
+        <li>Candidate pool is pre-ranked, not computed live</li>
+        <li>Rebuild required when source data changes</li>
+        <li>Full graph traversal requires a backend or WebAssembly</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>Second-Degree Connection Explorer &nbsp;·&nbsp; Process Book</span>
+    <span>7 / 8</span>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════════════ -->
+<!-- PAGE 8: PEER ASSESSMENT                                            -->
+<!-- ══════════════════════════════════════════════════════════════════ -->
+<div class="page">
+  <p class="eyebrow">Peer Assessment</p>
+  <h2>Contributions by team member</h2>
+  <p style="color:var(--muted); font-size:9pt; margin-bottom:10pt;">
+    The table below breaks down the primary responsibilities each team member
+    owned across the project milestones. Contributions were collaborative
+    throughout; this breakdown reflects who led each area.
+  </p>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width:22%">Team member</th>
+        <th style="width:78%">Primary contributions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <strong>Ahmed Chaouachi</strong><br>
+          <span style="font-size:8pt; color:var(--muted);">346447</span>
+        </td>
+        <td>
+          Led the Python data pipeline: raw data ingestion, adjacency graph
+          construction, second-degree computation, exemplar user selection, and
+          the JSON build scripts. Implemented the D3 Atlas section (six animated
+          bar charts). Performed the Milestone 1 EDA and drafted the quantitative
+          findings (degree distributions, attribute match rates) that informed
+          the scoring formula.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>Shin Urech</strong><br>
+          <span style="font-size:8pt; color:var(--muted);">327245</span>
+        </td>
+        <td>
+          Led the D3 force graph implementation: forceSimulation tuning,
+          radial ring layout, node and edge rendering, SVG layer ordering, drag
+          behavior, and highlight/glow interactions. Implemented the bridge-friend
+          detail panel and the animated candidate ranking. Responsible for the
+          overall site architecture (static HTML/CSS/JS, GitHub Pages deployment).
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>Joyti Goel</strong><br>
+          <span style="font-size:8pt; color:var(--muted);">325374</span>
+        </td>
+        <td>
+          Led UI/UX design: the dark navy design system, CSS variables, typography,
+          color palette, and responsive layout. Designed and implemented the Story
+          Mode overlay. Designed and built the Find a Match wizard (persona
+          selector, live mini force graph with hover-path reveal, multi-path fan
+          diagram on Screen 3, all four filters). Wrote the process book.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 style="margin-top:18pt;">Self-assessment</h2>
+  <p>
+    The visualization achieves all six MVP goals from the Milestone 2 plan: user
+    selector, D3 force graph, attribute filters, candidate ranking, detail panel,
+    and atlas charts. Milestone 3 adds Story Mode and the Find a Match wizard,
+    both of which exceed the original scope.
+  </p>
+  <p>
+    The choice to build around three pre-computed exemplar personas was
+    deliberate: each user was selected to represent a different age group and
+    degree range, keeping the storytelling focused. A live traversal backend
+    could expand this to any user in the dataset, but would introduce server
+    infrastructure, latency, and hosting costs that conflict with the static-site
+    requirement.
+  </p>
+  <p>
+    The music-taste filter remains unimplemented due to missing data, as
+    documented honestly in the site's caveat strip and disabled filter UI.
+    This is a data limitation, not a design or implementation failure.
+  </p>
+
+  <div class="callout" style="margin-top:16pt;">
+    <strong>GitHub repository:</strong>
+    <a href="https://github.com/AhmedGOATChaouachi/milestone2" style="color:var(--accent);">
+      github.com/AhmedGOATChaouachi/milestone2
+    </a><br>
+    <strong>Live site:</strong>
+    <a href="https://ahmedgoatchaouachi.github.io/milestone2/" style="color:var(--accent);">
+      ahmedgoatchaouachi.github.io/milestone2/
+    </a>
+  </div>
+
+  <div class="footer">
+    <span>Second-Degree Connection Explorer &nbsp;·&nbsp; Process Book</span>
+    <span>8 / 8</span>
+  </div>
+</div>
+
+</body>
+</html>

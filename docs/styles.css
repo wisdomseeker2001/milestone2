@@ -900,3 +900,195 @@ button:focus-visible, select:focus-visible, input:focus-visible,
 /* ─── Counter animation ──────────────────────────────────────────────────── */
 @keyframes countUp { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 .hero-stat.animated { animation: countUp 400ms ease both; }
+
+/* ─── Nav finder button ──────────────────────────────────────────────────── */
+.nav-finder-btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 18px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(107,142,198,0.35);
+  background: rgba(107,142,198,0.1);
+  color: #ccdeff;
+  font: 500 0.86rem/1 "DM Sans", sans-serif;
+  cursor: pointer;
+  transition: background var(--transition), border-color var(--transition), transform var(--transition);
+  white-space: nowrap;
+}
+.nav-finder-btn:hover {
+  background: rgba(107,142,198,0.18);
+  border-color: rgba(107,142,198,0.55);
+  transform: translateY(-1px);
+}
+
+/* ─── Finder wizard overlay ──────────────────────────────────────────────── */
+.finder-overlay {
+  position: fixed; inset: 0;
+  z-index: 300;
+  background: rgba(4,8,18,0.82);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: fadeIn 220ms ease;
+}
+.finder-panel {
+  width: min(760px, 100%);
+  max-height: 90vh;
+  overflow: hidden;
+  background: linear-gradient(165deg, rgba(12,24,42,0.99), rgba(9,18,34,0.99));
+  border: 1px solid rgba(107,142,198,0.28);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 40px 100px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.04);
+  animation: slideUp 260ms cubic-bezier(0.22,1,0.36,1);
+  display: flex;
+  flex-direction: column;
+}
+.finder-screen {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+}
+.finder-screen-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 24px 24px 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  flex-shrink: 0;
+}
+.finder-screen-header .eyebrow { color: #a8d4ff; }
+.finder-screen-header h2 { font-size: 1.5rem; margin-top: 4px; }
+.finder-screen-footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 24px;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  flex-shrink: 0;
+}
+.finder-hint { flex: 1; text-align: center; color: var(--muted); font-size: 0.84rem; }
+
+/* Screen 1 */
+.finder-profile { padding: 16px 24px; flex: 1; overflow-y: auto; }
+
+/* Screen 1: persona selector */
+.finder-persona-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 12px;
+}
+.finder-persona-card {
+  display: block; width: 100%; text-align: left;
+  padding: 16px 18px;
+  border-radius: var(--radius-md);
+  background: rgba(255,255,255,0.04);
+  border: 1.5px solid rgba(255,255,255,0.09);
+  cursor: pointer;
+  transition: border-color var(--transition), background var(--transition), transform var(--transition);
+  color: var(--ink);
+  font-family: inherit;
+}
+.finder-persona-card:hover {
+  border-color: rgba(107,142,198,0.45);
+  background: rgba(107,142,198,0.08);
+  transform: translateY(-1px);
+}
+.finder-persona-card.selected {
+  border-color: rgba(107,142,198,0.7);
+  background: rgba(107,142,198,0.14);
+}
+.finder-persona-card strong { display: block; font-size: 1rem; margin-bottom: 4px; }
+.finder-persona-card p { color: var(--muted); font-size: 0.84rem; margin: 0 0 10px; }
+.finder-persona-stats { display: flex; gap: 8px; flex-wrap: wrap; }
+.finder-persona-stats span {
+  font-size: 0.78rem; color: var(--muted);
+  background: rgba(255,255,255,0.06);
+  padding: 3px 8px; border-radius: 99px;
+}
+
+/* Screen 2 */
+.finder-filters {
+  display: grid;
+  grid-template-columns: 0.65fr 1fr 1fr 1fr;
+  gap: 10px;
+  padding: 14px 24px 0;
+  flex-shrink: 0;
+}
+.finder-field { display: block; }
+.finder-field span { display: block; margin-bottom: 6px; font-size: 0.88rem; color: var(--muted); }
+.finder-country-static {
+  height: 36px; line-height: 36px;
+  padding: 0 12px;
+  border-radius: var(--radius-md);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.09);
+  font-size: 0.88rem; color: var(--muted);
+  letter-spacing: 0.02em;
+}
+.finder-graph-container {
+  flex: 1;
+  min-height: 0;
+  padding: 10px 16px 0;
+  overflow: hidden;
+}
+.finder-graph-container svg { display: block; }
+.finder-candidate-card {
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  cursor: pointer;
+  transition: border-color var(--transition), transform var(--transition), background var(--transition);
+}
+.finder-candidate-card:hover {
+  border-color: rgba(107,142,198,0.38);
+  background: rgba(107,142,198,0.08);
+  transform: translateY(-1px);
+}
+.finder-candidate-card strong { display: block; font-size: 0.92rem; margin-bottom: 3px; }
+.finder-candidate-card p { color: var(--muted); font-size: 0.83rem; margin: 0 0 8px; }
+.finder-candidate-card .candidate-meta { display: flex; flex-wrap: wrap; gap: 5px; }
+
+/* Screen 3 rise animation */
+@keyframes finderRise {
+  from { opacity: 0; transform: translateY(28px) scale(0.96); }
+  to   { opacity: 1; transform: translateY(0)   scale(1); }
+}
+.finder-rise { animation: finderRise 300ms cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+/* Screen 3 */
+.finder-bridge-visual {
+  padding: 18px 24px 0;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.finder-bridge-detail {
+  padding: 10px 24px;
+  display: grid;
+  gap: 10px;
+  overflow-y: auto;
+  flex: 1;
+  min-height: 0;
+}
+.finder-bridge-card {
+  padding: 14px 16px;
+  border-radius: var(--radius-md);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.09);
+}
+.finder-bridge-card strong { display: block; margin-bottom: 5px; font-size: 0.96rem; }
+.finder-bridge-card p { color: var(--muted); font-size: 0.88rem; margin: 0; line-height: 1.6; }
+
+@media (max-width: 780px) {
+  .nav-finder-btn { display: none; }
+  .finder-filters { grid-template-columns: 1fr; }
+  .finder-results-grid { grid-template-columns: 1fr; }
+  .finder-profile-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}

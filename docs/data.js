@@ -1,5 +1,5 @@
 window.MILESTONE_DATA = {
-  "generated_at_utc": "2026-03-19T05:29:05.770745+00:00",
+  "generated_at_utc": "2026-05-28T12:19:15.425160+00:00",
   "dataset": {
     "title": "Last.fm UK User Graph Dataset",
     "source": "Zenodo",
@@ -121,15 +121,15 @@ window.MILESTONE_DATA = {
         "value": 4
       },
       {
-        "label": "FR",
-        "value": 3
-      },
-      {
         "label": "AU",
         "value": 3
       },
       {
-        "label": "CA",
+        "label": "FR",
+        "value": 3
+      },
+      {
+        "label": "JP",
         "value": 2
       },
       {
@@ -294,6 +294,10 @@ window.MILESTONE_DATA = {
       {
         "id": "same_age_group",
         "label": "Same age group"
+      },
+      {
+        "id": "same_gender",
+        "label": "Same gender"
       }
     ],
     "planned_filters": [
@@ -312,6 +316,7 @@ window.MILESTONE_DATA = {
           "ring": "root",
           "country": "UK",
           "age_group": "20s",
+          "gender": "female",
           "degree": 11
         },
         "summary": {
@@ -332,6 +337,7 @@ window.MILESTONE_DATA = {
             "ring": "root",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 11
           },
           {
@@ -340,6 +346,7 @@ window.MILESTONE_DATA = {
             "ring": "first",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 21
           },
           {
@@ -348,6 +355,7 @@ window.MILESTONE_DATA = {
             "ring": "first",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 6
           },
           {
@@ -356,6 +364,7 @@ window.MILESTONE_DATA = {
             "ring": "first",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 24
           },
           {
@@ -364,6 +373,7 @@ window.MILESTONE_DATA = {
             "ring": "first",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 5
           },
           {
@@ -372,6 +382,7 @@ window.MILESTONE_DATA = {
             "ring": "first",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 4
           },
           {
@@ -380,6 +391,7 @@ window.MILESTONE_DATA = {
             "ring": "first",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 18
           },
           {
@@ -388,6 +400,7 @@ window.MILESTONE_DATA = {
             "ring": "first",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 31
           },
           {
@@ -396,6 +409,7 @@ window.MILESTONE_DATA = {
             "ring": "first",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 4
           },
           {
@@ -404,6 +418,7 @@ window.MILESTONE_DATA = {
             "ring": "first",
             "country": "UK",
             "age_group": null,
+            "gender": "male",
             "degree": 5
           },
           {
@@ -412,6 +427,7 @@ window.MILESTONE_DATA = {
             "ring": "first",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 81
           },
           {
@@ -420,6 +436,7 @@ window.MILESTONE_DATA = {
             "ring": "first",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 48
           },
           {
@@ -428,6 +445,7 @@ window.MILESTONE_DATA = {
             "ring": "second",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 24
           },
           {
@@ -436,6 +454,7 @@ window.MILESTONE_DATA = {
             "ring": "second",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 78
           },
           {
@@ -444,6 +463,7 @@ window.MILESTONE_DATA = {
             "ring": "second",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 12
           },
           {
@@ -452,6 +472,7 @@ window.MILESTONE_DATA = {
             "ring": "second",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 10
           },
           {
@@ -460,6 +481,7 @@ window.MILESTONE_DATA = {
             "ring": "second",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 6
           },
           {
@@ -468,6 +490,7 @@ window.MILESTONE_DATA = {
             "ring": "second",
             "country": "UK",
             "age_group": null,
+            "gender": "male",
             "degree": 20
           },
           {
@@ -476,6 +499,7 @@ window.MILESTONE_DATA = {
             "ring": "second",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 1643
           },
           {
@@ -484,6 +508,7 @@ window.MILESTONE_DATA = {
             "ring": "second",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 310
           },
           {
@@ -492,6 +517,7 @@ window.MILESTONE_DATA = {
             "ring": "second",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 252
           },
           {
@@ -500,6 +526,7 @@ window.MILESTONE_DATA = {
             "ring": "second",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 234
           },
           {
@@ -508,6 +535,7 @@ window.MILESTONE_DATA = {
             "ring": "second",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 158
           },
           {
@@ -516,6 +544,7 @@ window.MILESTONE_DATA = {
             "ring": "second",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 153
           },
           {
@@ -524,6 +553,7 @@ window.MILESTONE_DATA = {
             "ring": "second",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 148
           },
           {
@@ -532,6 +562,7 @@ window.MILESTONE_DATA = {
             "ring": "second",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 147
           },
           {
@@ -540,6 +571,7 @@ window.MILESTONE_DATA = {
             "ring": "second",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 125
           },
           {
@@ -548,6 +580,7 @@ window.MILESTONE_DATA = {
             "ring": "second",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 118
           }
         ],
@@ -699,6 +732,7 @@ window.MILESTONE_DATA = {
             "label": "User 4801",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 21,
             "bridge_count": 1,
             "bridge_candidates": [
@@ -710,6 +744,7 @@ window.MILESTONE_DATA = {
             "label": "User 5598",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 6,
             "bridge_count": 0,
             "bridge_candidates": []
@@ -719,6 +754,7 @@ window.MILESTONE_DATA = {
             "label": "User 36663",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 24,
             "bridge_count": 3,
             "bridge_candidates": [
@@ -732,6 +768,7 @@ window.MILESTONE_DATA = {
             "label": "User 38375",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 5,
             "bridge_count": 1,
             "bridge_candidates": [
@@ -743,6 +780,7 @@ window.MILESTONE_DATA = {
             "label": "User 39835",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 4,
             "bridge_count": 1,
             "bridge_candidates": [
@@ -754,6 +792,7 @@ window.MILESTONE_DATA = {
             "label": "User 46963",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 18,
             "bridge_count": 5,
             "bridge_candidates": [
@@ -769,6 +808,7 @@ window.MILESTONE_DATA = {
             "label": "User 54423",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 31,
             "bridge_count": 5,
             "bridge_candidates": [
@@ -784,6 +824,7 @@ window.MILESTONE_DATA = {
             "label": "User 59161",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 4,
             "bridge_count": 0,
             "bridge_candidates": []
@@ -793,6 +834,7 @@ window.MILESTONE_DATA = {
             "label": "User 59703",
             "country": "UK",
             "age_group": null,
+            "gender": "male",
             "degree": 5,
             "bridge_count": 1,
             "bridge_candidates": [
@@ -804,6 +846,7 @@ window.MILESTONE_DATA = {
             "label": "User 60410",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 81,
             "bridge_count": 3,
             "bridge_candidates": [
@@ -817,6 +860,7 @@ window.MILESTONE_DATA = {
             "label": "User 69346",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 48,
             "bridge_count": 4,
             "bridge_candidates": [
@@ -833,6 +877,7 @@ window.MILESTONE_DATA = {
             "label": "User 67974",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 24,
             "mutual_friends": 4,
             "mutual_friend_ids": [
@@ -843,14 +888,16 @@ window.MILESTONE_DATA = {
             ],
             "same_country": true,
             "same_age_group": true,
-            "shared_attribute_count": 2,
-            "score": 10
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 11
           },
           {
             "id": 44702,
             "label": "User 44702",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 78,
             "mutual_friends": 2,
             "mutual_friend_ids": [
@@ -859,6 +906,7 @@ window.MILESTONE_DATA = {
             ],
             "same_country": true,
             "same_age_group": true,
+            "same_gender": false,
             "shared_attribute_count": 2,
             "score": 6
           },
@@ -867,6 +915,7 @@ window.MILESTONE_DATA = {
             "label": "User 26989",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 12,
             "mutual_friends": 2,
             "mutual_friend_ids": [
@@ -875,6 +924,7 @@ window.MILESTONE_DATA = {
             ],
             "same_country": true,
             "same_age_group": true,
+            "same_gender": false,
             "shared_attribute_count": 2,
             "score": 6
           },
@@ -883,6 +933,7 @@ window.MILESTONE_DATA = {
             "label": "User 43687",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 10,
             "mutual_friends": 2,
             "mutual_friend_ids": [
@@ -891,14 +942,16 @@ window.MILESTONE_DATA = {
             ],
             "same_country": true,
             "same_age_group": true,
-            "shared_attribute_count": 2,
-            "score": 6
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 7
           },
           {
             "id": 73750,
             "label": "User 73750",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 6,
             "mutual_friends": 2,
             "mutual_friend_ids": [
@@ -907,14 +960,16 @@ window.MILESTONE_DATA = {
             ],
             "same_country": true,
             "same_age_group": true,
-            "shared_attribute_count": 2,
-            "score": 6
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 7
           },
           {
             "id": 25682,
             "label": "User 25682",
             "country": "UK",
             "age_group": null,
+            "gender": "male",
             "degree": 20,
             "mutual_friends": 2,
             "mutual_friend_ids": [
@@ -923,6 +978,7 @@ window.MILESTONE_DATA = {
             ],
             "same_country": true,
             "same_age_group": false,
+            "same_gender": false,
             "shared_attribute_count": 1,
             "score": 5
           },
@@ -931,6 +987,7 @@ window.MILESTONE_DATA = {
             "label": "User 51398",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 1643,
             "mutual_friends": 1,
             "mutual_friend_ids": [
@@ -938,6 +995,7 @@ window.MILESTONE_DATA = {
             ],
             "same_country": true,
             "same_age_group": true,
+            "same_gender": false,
             "shared_attribute_count": 2,
             "score": 4
           },
@@ -946,6 +1004,7 @@ window.MILESTONE_DATA = {
             "label": "User 3670",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 310,
             "mutual_friends": 1,
             "mutual_friend_ids": [
@@ -953,6 +1012,7 @@ window.MILESTONE_DATA = {
             ],
             "same_country": true,
             "same_age_group": true,
+            "same_gender": false,
             "shared_attribute_count": 2,
             "score": 4
           },
@@ -961,6 +1021,7 @@ window.MILESTONE_DATA = {
             "label": "User 58786",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 252,
             "mutual_friends": 1,
             "mutual_friend_ids": [
@@ -968,6 +1029,7 @@ window.MILESTONE_DATA = {
             ],
             "same_country": true,
             "same_age_group": true,
+            "same_gender": false,
             "shared_attribute_count": 2,
             "score": 4
           },
@@ -976,6 +1038,7 @@ window.MILESTONE_DATA = {
             "label": "User 3010",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 234,
             "mutual_friends": 1,
             "mutual_friend_ids": [
@@ -983,14 +1046,16 @@ window.MILESTONE_DATA = {
             ],
             "same_country": true,
             "same_age_group": true,
-            "shared_attribute_count": 2,
-            "score": 4
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
           },
           {
             "id": 52851,
             "label": "User 52851",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 158,
             "mutual_friends": 1,
             "mutual_friend_ids": [
@@ -998,14 +1063,16 @@ window.MILESTONE_DATA = {
             ],
             "same_country": true,
             "same_age_group": true,
-            "shared_attribute_count": 2,
-            "score": 4
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
           },
           {
             "id": 14099,
             "label": "User 14099",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 153,
             "mutual_friends": 1,
             "mutual_friend_ids": [
@@ -1013,6 +1080,7 @@ window.MILESTONE_DATA = {
             ],
             "same_country": true,
             "same_age_group": true,
+            "same_gender": false,
             "shared_attribute_count": 2,
             "score": 4
           },
@@ -1021,6 +1089,7 @@ window.MILESTONE_DATA = {
             "label": "User 57896",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 148,
             "mutual_friends": 1,
             "mutual_friend_ids": [
@@ -1028,14 +1097,16 @@ window.MILESTONE_DATA = {
             ],
             "same_country": true,
             "same_age_group": true,
-            "shared_attribute_count": 2,
-            "score": 4
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
           },
           {
             "id": 35312,
             "label": "User 35312",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 147,
             "mutual_friends": 1,
             "mutual_friend_ids": [
@@ -1043,6 +1114,7 @@ window.MILESTONE_DATA = {
             ],
             "same_country": true,
             "same_age_group": true,
+            "same_gender": false,
             "shared_attribute_count": 2,
             "score": 4
           },
@@ -1051,6 +1123,7 @@ window.MILESTONE_DATA = {
             "label": "User 40902",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 125,
             "mutual_friends": 1,
             "mutual_friend_ids": [
@@ -1058,14 +1131,16 @@ window.MILESTONE_DATA = {
             ],
             "same_country": true,
             "same_age_group": true,
-            "shared_attribute_count": 2,
-            "score": 4
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
           },
           {
             "id": 12363,
             "label": "User 12363",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 118,
             "mutual_friends": 1,
             "mutual_friend_ids": [
@@ -1073,6 +1148,867 @@ window.MILESTONE_DATA = {
             ],
             "same_country": true,
             "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          }
+        ],
+        "finder_candidates": [
+          {
+            "id": 67974,
+            "label": "User 67974",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "female",
+            "degree": 24,
+            "mutual_friends": 4,
+            "mutual_friend_ids": [
+              4801,
+              38375,
+              59703,
+              69346
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 11
+          },
+          {
+            "id": 44702,
+            "label": "User 44702",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "male",
+            "degree": 78,
+            "mutual_friends": 2,
+            "mutual_friend_ids": [
+              36663,
+              54423
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 6
+          },
+          {
+            "id": 26989,
+            "label": "User 26989",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "male",
+            "degree": 12,
+            "mutual_friends": 2,
+            "mutual_friend_ids": [
+              46963,
+              54423
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 6
+          },
+          {
+            "id": 43687,
+            "label": "User 43687",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "female",
+            "degree": 10,
+            "mutual_friends": 2,
+            "mutual_friend_ids": [
+              46963,
+              54423
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 7
+          },
+          {
+            "id": 73750,
+            "label": "User 73750",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "female",
+            "degree": 6,
+            "mutual_friends": 2,
+            "mutual_friend_ids": [
+              46963,
+              54423
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 7
+          },
+          {
+            "id": 25682,
+            "label": "User 25682",
+            "country": "UK",
+            "age_group": null,
+            "gender": "male",
+            "degree": 20,
+            "mutual_friends": 2,
+            "mutual_friend_ids": [
+              46963,
+              54423
+            ],
+            "same_country": true,
+            "same_age_group": false,
+            "same_gender": false,
+            "shared_attribute_count": 1,
+            "score": 5
+          },
+          {
+            "id": 51398,
+            "label": "User 51398",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "male",
+            "degree": 1643,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              69346
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 3670,
+            "label": "User 3670",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "male",
+            "degree": 310,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              36663
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 58786,
+            "label": "User 58786",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "male",
+            "degree": 252,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              46963
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 3010,
+            "label": "User 3010",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "female",
+            "degree": 234,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              69346
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 52851,
+            "label": "User 52851",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "female",
+            "degree": 158,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              60410
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 14099,
+            "label": "User 14099",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "male",
+            "degree": 153,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              69346
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 57896,
+            "label": "User 57896",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "female",
+            "degree": 148,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              60410
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 35312,
+            "label": "User 35312",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "male",
+            "degree": 147,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              36663
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 40902,
+            "label": "User 40902",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "female",
+            "degree": 125,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              39835
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 12363,
+            "label": "User 12363",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "female",
+            "degree": 118,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              60410
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 37789,
+            "label": "User 37789",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "not_shared",
+            "degree": 113,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              60410
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 71760,
+            "label": "User 71760",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "female",
+            "degree": 111,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              60410
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 38109,
+            "label": "User 38109",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "female",
+            "degree": 108,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              69346
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 54749,
+            "label": "User 54749",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "female",
+            "degree": 105,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              60410
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 73000,
+            "label": "User 73000",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "female",
+            "degree": 104,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              60410
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 45312,
+            "label": "User 45312",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "not_shared",
+            "degree": 99,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              69346
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 41479,
+            "label": "User 41479",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "female",
+            "degree": 94,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              69346
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 43435,
+            "label": "User 43435",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "male",
+            "degree": 93,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              69346
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 28056,
+            "label": "User 28056",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "female",
+            "degree": 86,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              60410
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 65827,
+            "label": "User 65827",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "male",
+            "degree": 82,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              46963
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 74813,
+            "label": "User 74813",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "male",
+            "degree": 75,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              59161
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 45452,
+            "label": "User 45452",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "female",
+            "degree": 71,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              69346
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 6321,
+            "label": "User 6321",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "female",
+            "degree": 64,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              60410
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 18786,
+            "label": "User 18786",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "female",
+            "degree": 60,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              60410
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 13272,
+            "label": "User 13272",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "female",
+            "degree": 56,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              69346
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 52445,
+            "label": "User 52445",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "male",
+            "degree": 54,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              36663
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 54209,
+            "label": "User 54209",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "female",
+            "degree": 51,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              69346
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 1960,
+            "label": "User 1960",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "not_shared",
+            "degree": 50,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              60410
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 7711,
+            "label": "User 7711",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "male",
+            "degree": 49,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              54423
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 31860,
+            "label": "User 31860",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "female",
+            "degree": 48,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              60410
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 42684,
+            "label": "User 42684",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "male",
+            "degree": 48,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              69346
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 75607,
+            "label": "User 75607",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "female",
+            "degree": 47,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              60410
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 54978,
+            "label": "User 54978",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "female",
+            "degree": 46,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              69346
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 74482,
+            "label": "User 74482",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "female",
+            "degree": 46,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              69346
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 10072,
+            "label": "User 10072",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "female",
+            "degree": 46,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              60410
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 28207,
+            "label": "User 28207",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "female",
+            "degree": 45,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              54423
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 30554,
+            "label": "User 30554",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "male",
+            "degree": 45,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              69346
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 34616,
+            "label": "User 34616",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "female",
+            "degree": 44,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              60410
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 54157,
+            "label": "User 54157",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "female",
+            "degree": 44,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              60410
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 50661,
+            "label": "User 50661",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "female",
+            "degree": 44,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              54423
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 13314,
+            "label": "User 13314",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "male",
+            "degree": 41,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              46963
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 36898,
+            "label": "User 36898",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "female",
+            "degree": 41,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              60410
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 57357,
+            "label": "User 57357",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "female",
+            "degree": 40,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              39835
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 61269,
+            "label": "User 61269",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "male",
+            "degree": 40,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              46963
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
             "shared_attribute_count": 2,
             "score": 4
           }
@@ -1085,6 +2021,7 @@ window.MILESTONE_DATA = {
           "ring": "root",
           "country": "UK",
           "age_group": "10s",
+          "gender": "female",
           "degree": 14
         },
         "summary": {
@@ -1105,6 +2042,7 @@ window.MILESTONE_DATA = {
             "ring": "root",
             "country": "UK",
             "age_group": "10s",
+            "gender": "female",
             "degree": 14
           },
           {
@@ -1113,6 +2051,7 @@ window.MILESTONE_DATA = {
             "ring": "first",
             "country": "UK",
             "age_group": "10s",
+            "gender": "female",
             "degree": 10
           },
           {
@@ -1121,6 +2060,7 @@ window.MILESTONE_DATA = {
             "ring": "first",
             "country": "UK",
             "age_group": "10s",
+            "gender": "male",
             "degree": 30
           },
           {
@@ -1129,6 +2069,7 @@ window.MILESTONE_DATA = {
             "ring": "first",
             "country": "UK",
             "age_group": "10s",
+            "gender": "male",
             "degree": 87
           },
           {
@@ -1137,6 +2078,7 @@ window.MILESTONE_DATA = {
             "ring": "first",
             "country": "UK",
             "age_group": "10s",
+            "gender": "female",
             "degree": 13
           },
           {
@@ -1145,6 +2087,7 @@ window.MILESTONE_DATA = {
             "ring": "first",
             "country": "UK",
             "age_group": "10s",
+            "gender": "female",
             "degree": 19
           },
           {
@@ -1153,6 +2096,7 @@ window.MILESTONE_DATA = {
             "ring": "first",
             "country": "UK",
             "age_group": "10s",
+            "gender": "male",
             "degree": 10
           },
           {
@@ -1161,6 +2105,7 @@ window.MILESTONE_DATA = {
             "ring": "first",
             "country": "UK",
             "age_group": "10s",
+            "gender": "male",
             "degree": 21
           },
           {
@@ -1169,6 +2114,7 @@ window.MILESTONE_DATA = {
             "ring": "first",
             "country": "UK",
             "age_group": "10s",
+            "gender": "not_shared",
             "degree": 12
           },
           {
@@ -1177,6 +2123,7 @@ window.MILESTONE_DATA = {
             "ring": "first",
             "country": "UK",
             "age_group": "10s",
+            "gender": "male",
             "degree": 9
           },
           {
@@ -1185,6 +2132,7 @@ window.MILESTONE_DATA = {
             "ring": "first",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 31
           },
           {
@@ -1193,6 +2141,7 @@ window.MILESTONE_DATA = {
             "ring": "first",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 7
           },
           {
@@ -1201,6 +2150,7 @@ window.MILESTONE_DATA = {
             "ring": "first",
             "country": "UK",
             "age_group": "10s",
+            "gender": "female",
             "degree": 14
           },
           {
@@ -1209,6 +2159,7 @@ window.MILESTONE_DATA = {
             "ring": "first",
             "country": "UK",
             "age_group": "10s",
+            "gender": "female",
             "degree": 8
           },
           {
@@ -1217,6 +2168,7 @@ window.MILESTONE_DATA = {
             "ring": "first",
             "country": "UK",
             "age_group": "10s",
+            "gender": "male",
             "degree": 8
           },
           {
@@ -1225,6 +2177,7 @@ window.MILESTONE_DATA = {
             "ring": "second",
             "country": "UK",
             "age_group": "10s",
+            "gender": "female",
             "degree": 199
           },
           {
@@ -1233,6 +2186,7 @@ window.MILESTONE_DATA = {
             "ring": "second",
             "country": "UK",
             "age_group": "10s",
+            "gender": "female",
             "degree": 74
           },
           {
@@ -1241,6 +2195,7 @@ window.MILESTONE_DATA = {
             "ring": "second",
             "country": "UK",
             "age_group": "10s",
+            "gender": "male",
             "degree": 22
           },
           {
@@ -1249,6 +2204,7 @@ window.MILESTONE_DATA = {
             "ring": "second",
             "country": "UK",
             "age_group": "50s",
+            "gender": "male",
             "degree": 906
           },
           {
@@ -1257,6 +2213,7 @@ window.MILESTONE_DATA = {
             "ring": "second",
             "country": "UK",
             "age_group": null,
+            "gender": "female",
             "degree": 30
           },
           {
@@ -1265,6 +2222,7 @@ window.MILESTONE_DATA = {
             "ring": "second",
             "country": "UK",
             "age_group": null,
+            "gender": "not_shared",
             "degree": 22
           },
           {
@@ -1273,6 +2231,7 @@ window.MILESTONE_DATA = {
             "ring": "second",
             "country": "UK",
             "age_group": "10s",
+            "gender": "not_shared",
             "degree": 76
           },
           {
@@ -1281,6 +2240,7 @@ window.MILESTONE_DATA = {
             "ring": "second",
             "country": "UK",
             "age_group": "10s",
+            "gender": "female",
             "degree": 60
           },
           {
@@ -1289,6 +2249,7 @@ window.MILESTONE_DATA = {
             "ring": "second",
             "country": "UK",
             "age_group": "10s",
+            "gender": "female",
             "degree": 58
           },
           {
@@ -1297,6 +2258,7 @@ window.MILESTONE_DATA = {
             "ring": "second",
             "country": "UK",
             "age_group": "10s",
+            "gender": "male",
             "degree": 44
           },
           {
@@ -1305,6 +2267,7 @@ window.MILESTONE_DATA = {
             "ring": "second",
             "country": "UK",
             "age_group": "10s",
+            "gender": "male",
             "degree": 34
           },
           {
@@ -1313,6 +2276,7 @@ window.MILESTONE_DATA = {
             "ring": "second",
             "country": "UK",
             "age_group": "10s",
+            "gender": "female",
             "degree": 32
           },
           {
@@ -1321,6 +2285,7 @@ window.MILESTONE_DATA = {
             "ring": "second",
             "country": "UK",
             "age_group": "10s",
+            "gender": "female",
             "degree": 22
           },
           {
@@ -1329,6 +2294,7 @@ window.MILESTONE_DATA = {
             "ring": "second",
             "country": "UK",
             "age_group": "10s",
+            "gender": "female",
             "degree": 20
           },
           {
@@ -1337,6 +2303,7 @@ window.MILESTONE_DATA = {
             "ring": "second",
             "country": "UK",
             "age_group": "10s",
+            "gender": "female",
             "degree": 20
           },
           {
@@ -1345,6 +2312,7 @@ window.MILESTONE_DATA = {
             "ring": "second",
             "country": "UK",
             "age_group": "10s",
+            "gender": "female",
             "degree": 20
           }
         ],
@@ -1572,6 +2540,7 @@ window.MILESTONE_DATA = {
             "label": "User 2282",
             "country": "UK",
             "age_group": "10s",
+            "gender": "female",
             "degree": 10,
             "bridge_count": 0,
             "bridge_candidates": []
@@ -1581,6 +2550,7 @@ window.MILESTONE_DATA = {
             "label": "User 7780",
             "country": "UK",
             "age_group": "10s",
+            "gender": "male",
             "degree": 30,
             "bridge_count": 3,
             "bridge_candidates": [
@@ -1594,6 +2564,7 @@ window.MILESTONE_DATA = {
             "label": "User 9724",
             "country": "UK",
             "age_group": "10s",
+            "gender": "male",
             "degree": 87,
             "bridge_count": 15,
             "bridge_candidates": [
@@ -1619,6 +2590,7 @@ window.MILESTONE_DATA = {
             "label": "User 19744",
             "country": "UK",
             "age_group": "10s",
+            "gender": "female",
             "degree": 13,
             "bridge_count": 2,
             "bridge_candidates": [
@@ -1631,6 +2603,7 @@ window.MILESTONE_DATA = {
             "label": "User 19785",
             "country": "UK",
             "age_group": "10s",
+            "gender": "female",
             "degree": 19,
             "bridge_count": 5,
             "bridge_candidates": [
@@ -1646,6 +2619,7 @@ window.MILESTONE_DATA = {
             "label": "User 43690",
             "country": "UK",
             "age_group": "10s",
+            "gender": "male",
             "degree": 10,
             "bridge_count": 0,
             "bridge_candidates": []
@@ -1655,6 +2629,7 @@ window.MILESTONE_DATA = {
             "label": "User 43964",
             "country": "UK",
             "age_group": "10s",
+            "gender": "male",
             "degree": 21,
             "bridge_count": 2,
             "bridge_candidates": [
@@ -1667,6 +2642,7 @@ window.MILESTONE_DATA = {
             "label": "User 44506",
             "country": "UK",
             "age_group": "10s",
+            "gender": "not_shared",
             "degree": 12,
             "bridge_count": 0,
             "bridge_candidates": []
@@ -1676,6 +2652,7 @@ window.MILESTONE_DATA = {
             "label": "User 44643",
             "country": "UK",
             "age_group": "10s",
+            "gender": "male",
             "degree": 9,
             "bridge_count": 0,
             "bridge_candidates": []
@@ -1685,6 +2662,7 @@ window.MILESTONE_DATA = {
             "label": "User 50313",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 31,
             "bridge_count": 8,
             "bridge_candidates": [
@@ -1703,6 +2681,7 @@ window.MILESTONE_DATA = {
             "label": "User 50641",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 7,
             "bridge_count": 1,
             "bridge_candidates": [
@@ -1714,6 +2693,7 @@ window.MILESTONE_DATA = {
             "label": "User 58345",
             "country": "UK",
             "age_group": "10s",
+            "gender": "female",
             "degree": 14,
             "bridge_count": 2,
             "bridge_candidates": [
@@ -1726,6 +2706,7 @@ window.MILESTONE_DATA = {
             "label": "User 61485",
             "country": "UK",
             "age_group": "10s",
+            "gender": "female",
             "degree": 8,
             "bridge_count": 1,
             "bridge_candidates": [
@@ -1737,6 +2718,7 @@ window.MILESTONE_DATA = {
             "label": "User 73125",
             "country": "UK",
             "age_group": "10s",
+            "gender": "male",
             "degree": 8,
             "bridge_count": 1,
             "bridge_candidates": [
@@ -1750,6 +2732,7 @@ window.MILESTONE_DATA = {
             "label": "User 10639",
             "country": "UK",
             "age_group": "10s",
+            "gender": "female",
             "degree": 199,
             "mutual_friends": 5,
             "mutual_friend_ids": [
@@ -1761,14 +2744,16 @@ window.MILESTONE_DATA = {
             ],
             "same_country": true,
             "same_age_group": true,
-            "shared_attribute_count": 2,
-            "score": 12
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 13
           },
           {
             "id": 47859,
             "label": "User 47859",
             "country": "UK",
             "age_group": "10s",
+            "gender": "female",
             "degree": 74,
             "mutual_friends": 3,
             "mutual_friend_ids": [
@@ -1778,14 +2763,16 @@ window.MILESTONE_DATA = {
             ],
             "same_country": true,
             "same_age_group": true,
-            "shared_attribute_count": 2,
-            "score": 8
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 9
           },
           {
             "id": 45853,
             "label": "User 45853",
             "country": "UK",
             "age_group": "10s",
+            "gender": "male",
             "degree": 22,
             "mutual_friends": 3,
             "mutual_friend_ids": [
@@ -1795,6 +2782,7 @@ window.MILESTONE_DATA = {
             ],
             "same_country": true,
             "same_age_group": true,
+            "same_gender": false,
             "shared_attribute_count": 2,
             "score": 8
           },
@@ -1803,6 +2791,7 @@ window.MILESTONE_DATA = {
             "label": "User 12367",
             "country": "UK",
             "age_group": "50s",
+            "gender": "male",
             "degree": 906,
             "mutual_friends": 3,
             "mutual_friend_ids": [
@@ -1812,6 +2801,7 @@ window.MILESTONE_DATA = {
             ],
             "same_country": true,
             "same_age_group": false,
+            "same_gender": false,
             "shared_attribute_count": 1,
             "score": 7
           },
@@ -1820,6 +2810,7 @@ window.MILESTONE_DATA = {
             "label": "User 17541",
             "country": "UK",
             "age_group": null,
+            "gender": "female",
             "degree": 30,
             "mutual_friends": 3,
             "mutual_friend_ids": [
@@ -1829,14 +2820,16 @@ window.MILESTONE_DATA = {
             ],
             "same_country": true,
             "same_age_group": false,
-            "shared_attribute_count": 1,
-            "score": 7
+            "same_gender": true,
+            "shared_attribute_count": 2,
+            "score": 8
           },
           {
             "id": 64321,
             "label": "User 64321",
             "country": "UK",
             "age_group": null,
+            "gender": "not_shared",
             "degree": 22,
             "mutual_friends": 3,
             "mutual_friend_ids": [
@@ -1846,6 +2839,7 @@ window.MILESTONE_DATA = {
             ],
             "same_country": true,
             "same_age_group": false,
+            "same_gender": false,
             "shared_attribute_count": 1,
             "score": 7
           },
@@ -1854,6 +2848,7 @@ window.MILESTONE_DATA = {
             "label": "User 19775",
             "country": "UK",
             "age_group": "10s",
+            "gender": "not_shared",
             "degree": 76,
             "mutual_friends": 2,
             "mutual_friend_ids": [
@@ -1862,6 +2857,7 @@ window.MILESTONE_DATA = {
             ],
             "same_country": true,
             "same_age_group": true,
+            "same_gender": false,
             "shared_attribute_count": 2,
             "score": 6
           },
@@ -1870,6 +2866,7 @@ window.MILESTONE_DATA = {
             "label": "User 66775",
             "country": "UK",
             "age_group": "10s",
+            "gender": "female",
             "degree": 60,
             "mutual_friends": 2,
             "mutual_friend_ids": [
@@ -1878,14 +2875,16 @@ window.MILESTONE_DATA = {
             ],
             "same_country": true,
             "same_age_group": true,
-            "shared_attribute_count": 2,
-            "score": 6
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 7
           },
           {
             "id": 12023,
             "label": "User 12023",
             "country": "UK",
             "age_group": "10s",
+            "gender": "female",
             "degree": 58,
             "mutual_friends": 2,
             "mutual_friend_ids": [
@@ -1894,14 +2893,16 @@ window.MILESTONE_DATA = {
             ],
             "same_country": true,
             "same_age_group": true,
-            "shared_attribute_count": 2,
-            "score": 6
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 7
           },
           {
             "id": 24043,
             "label": "User 24043",
             "country": "UK",
             "age_group": "10s",
+            "gender": "male",
             "degree": 44,
             "mutual_friends": 2,
             "mutual_friend_ids": [
@@ -1910,6 +2911,7 @@ window.MILESTONE_DATA = {
             ],
             "same_country": true,
             "same_age_group": true,
+            "same_gender": false,
             "shared_attribute_count": 2,
             "score": 6
           },
@@ -1918,6 +2920,7 @@ window.MILESTONE_DATA = {
             "label": "User 48270",
             "country": "UK",
             "age_group": "10s",
+            "gender": "male",
             "degree": 34,
             "mutual_friends": 2,
             "mutual_friend_ids": [
@@ -1926,6 +2929,7 @@ window.MILESTONE_DATA = {
             ],
             "same_country": true,
             "same_age_group": true,
+            "same_gender": false,
             "shared_attribute_count": 2,
             "score": 6
           },
@@ -1934,6 +2938,7 @@ window.MILESTONE_DATA = {
             "label": "User 19137",
             "country": "UK",
             "age_group": "10s",
+            "gender": "female",
             "degree": 32,
             "mutual_friends": 2,
             "mutual_friend_ids": [
@@ -1942,14 +2947,16 @@ window.MILESTONE_DATA = {
             ],
             "same_country": true,
             "same_age_group": true,
-            "shared_attribute_count": 2,
-            "score": 6
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 7
           },
           {
             "id": 20343,
             "label": "User 20343",
             "country": "UK",
             "age_group": "10s",
+            "gender": "female",
             "degree": 22,
             "mutual_friends": 2,
             "mutual_friend_ids": [
@@ -1958,14 +2965,16 @@ window.MILESTONE_DATA = {
             ],
             "same_country": true,
             "same_age_group": true,
-            "shared_attribute_count": 2,
-            "score": 6
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 7
           },
           {
             "id": 6969,
             "label": "User 6969",
             "country": "UK",
             "age_group": "10s",
+            "gender": "female",
             "degree": 20,
             "mutual_friends": 2,
             "mutual_friend_ids": [
@@ -1974,14 +2983,16 @@ window.MILESTONE_DATA = {
             ],
             "same_country": true,
             "same_age_group": true,
-            "shared_attribute_count": 2,
-            "score": 6
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 7
           },
           {
             "id": 19782,
             "label": "User 19782",
             "country": "UK",
             "age_group": "10s",
+            "gender": "female",
             "degree": 20,
             "mutual_friends": 2,
             "mutual_friend_ids": [
@@ -1990,14 +3001,16 @@ window.MILESTONE_DATA = {
             ],
             "same_country": true,
             "same_age_group": true,
-            "shared_attribute_count": 2,
-            "score": 6
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 7
           },
           {
             "id": 60880,
             "label": "User 60880",
             "country": "UK",
             "age_group": "10s",
+            "gender": "female",
             "degree": 20,
             "mutual_friends": 2,
             "mutual_friend_ids": [
@@ -2006,8 +3019,900 @@ window.MILESTONE_DATA = {
             ],
             "same_country": true,
             "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 7
+          }
+        ],
+        "finder_candidates": [
+          {
+            "id": 10639,
+            "label": "User 10639",
+            "country": "UK",
+            "age_group": "10s",
+            "gender": "female",
+            "degree": 199,
+            "mutual_friends": 5,
+            "mutual_friend_ids": [
+              9724,
+              19785,
+              50313,
+              58345,
+              61485
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 13
+          },
+          {
+            "id": 47859,
+            "label": "User 47859",
+            "country": "UK",
+            "age_group": "10s",
+            "gender": "female",
+            "degree": 74,
+            "mutual_friends": 3,
+            "mutual_friend_ids": [
+              9724,
+              19785,
+              50313
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 9
+          },
+          {
+            "id": 45853,
+            "label": "User 45853",
+            "country": "UK",
+            "age_group": "10s",
+            "gender": "male",
+            "degree": 22,
+            "mutual_friends": 3,
+            "mutual_friend_ids": [
+              7780,
+              9724,
+              58345
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 8
+          },
+          {
+            "id": 12367,
+            "label": "User 12367",
+            "country": "UK",
+            "age_group": "50s",
+            "gender": "male",
+            "degree": 906,
+            "mutual_friends": 3,
+            "mutual_friend_ids": [
+              9724,
+              19744,
+              19785
+            ],
+            "same_country": true,
+            "same_age_group": false,
+            "same_gender": false,
+            "shared_attribute_count": 1,
+            "score": 7
+          },
+          {
+            "id": 17541,
+            "label": "User 17541",
+            "country": "UK",
+            "age_group": null,
+            "gender": "female",
+            "degree": 30,
+            "mutual_friends": 3,
+            "mutual_friend_ids": [
+              9724,
+              43964,
+              50641
+            ],
+            "same_country": true,
+            "same_age_group": false,
+            "same_gender": true,
+            "shared_attribute_count": 2,
+            "score": 8
+          },
+          {
+            "id": 64321,
+            "label": "User 64321",
+            "country": "UK",
+            "age_group": null,
+            "gender": "not_shared",
+            "degree": 22,
+            "mutual_friends": 3,
+            "mutual_friend_ids": [
+              9724,
+              19785,
+              50313
+            ],
+            "same_country": true,
+            "same_age_group": false,
+            "same_gender": false,
+            "shared_attribute_count": 1,
+            "score": 7
+          },
+          {
+            "id": 19775,
+            "label": "User 19775",
+            "country": "UK",
+            "age_group": "10s",
+            "gender": "not_shared",
+            "degree": 76,
+            "mutual_friends": 2,
+            "mutual_friend_ids": [
+              9724,
+              43964
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
             "shared_attribute_count": 2,
             "score": 6
+          },
+          {
+            "id": 66775,
+            "label": "User 66775",
+            "country": "UK",
+            "age_group": "10s",
+            "gender": "female",
+            "degree": 60,
+            "mutual_friends": 2,
+            "mutual_friend_ids": [
+              9724,
+              19744
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 7
+          },
+          {
+            "id": 12023,
+            "label": "User 12023",
+            "country": "UK",
+            "age_group": "10s",
+            "gender": "female",
+            "degree": 58,
+            "mutual_friends": 2,
+            "mutual_friend_ids": [
+              7780,
+              73125
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 7
+          },
+          {
+            "id": 24043,
+            "label": "User 24043",
+            "country": "UK",
+            "age_group": "10s",
+            "gender": "male",
+            "degree": 44,
+            "mutual_friends": 2,
+            "mutual_friend_ids": [
+              9724,
+              19785
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 6
+          },
+          {
+            "id": 48270,
+            "label": "User 48270",
+            "country": "UK",
+            "age_group": "10s",
+            "gender": "male",
+            "degree": 34,
+            "mutual_friends": 2,
+            "mutual_friend_ids": [
+              9724,
+              50313
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 6
+          },
+          {
+            "id": 19137,
+            "label": "User 19137",
+            "country": "UK",
+            "age_group": "10s",
+            "gender": "female",
+            "degree": 32,
+            "mutual_friends": 2,
+            "mutual_friend_ids": [
+              7780,
+              9724
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 7
+          },
+          {
+            "id": 20343,
+            "label": "User 20343",
+            "country": "UK",
+            "age_group": "10s",
+            "gender": "female",
+            "degree": 22,
+            "mutual_friends": 2,
+            "mutual_friend_ids": [
+              9724,
+              50313
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 7
+          },
+          {
+            "id": 6969,
+            "label": "User 6969",
+            "country": "UK",
+            "age_group": "10s",
+            "gender": "female",
+            "degree": 20,
+            "mutual_friends": 2,
+            "mutual_friend_ids": [
+              9724,
+              50313
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 7
+          },
+          {
+            "id": 19782,
+            "label": "User 19782",
+            "country": "UK",
+            "age_group": "10s",
+            "gender": "female",
+            "degree": 20,
+            "mutual_friends": 2,
+            "mutual_friend_ids": [
+              9724,
+              50313
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 7
+          },
+          {
+            "id": 60880,
+            "label": "User 60880",
+            "country": "UK",
+            "age_group": "10s",
+            "gender": "female",
+            "degree": 20,
+            "mutual_friends": 2,
+            "mutual_friend_ids": [
+              9724,
+              50313
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 7
+          },
+          {
+            "id": 2032,
+            "label": "User 2032",
+            "country": "UK",
+            "age_group": "10s",
+            "gender": "female",
+            "degree": 20,
+            "mutual_friends": 2,
+            "mutual_friend_ids": [
+              9724,
+              50313
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 7
+          },
+          {
+            "id": 30199,
+            "label": "User 30199",
+            "country": "UK",
+            "age_group": "10s",
+            "gender": "male",
+            "degree": 13,
+            "mutual_friends": 2,
+            "mutual_friend_ids": [
+              9724,
+              19785
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 6
+          },
+          {
+            "id": 10005,
+            "label": "User 10005",
+            "country": "UK",
+            "age_group": "10s",
+            "gender": "male",
+            "degree": 11,
+            "mutual_friends": 2,
+            "mutual_friend_ids": [
+              9724,
+              61485
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 6
+          },
+          {
+            "id": 26602,
+            "label": "User 26602",
+            "country": "UK",
+            "age_group": "10s",
+            "gender": "female",
+            "degree": 7,
+            "mutual_friends": 2,
+            "mutual_friend_ids": [
+              9724,
+              50313
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 7
+          },
+          {
+            "id": 17214,
+            "label": "User 17214",
+            "country": "UK",
+            "age_group": "10s",
+            "gender": "male",
+            "degree": 6,
+            "mutual_friends": 2,
+            "mutual_friend_ids": [
+              9724,
+              50313
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 6
+          },
+          {
+            "id": 60262,
+            "label": "User 60262",
+            "country": "UK",
+            "age_group": "10s",
+            "gender": "female",
+            "degree": 6,
+            "mutual_friends": 2,
+            "mutual_friend_ids": [
+              44643,
+              61485
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 7
+          },
+          {
+            "id": 63315,
+            "label": "User 63315",
+            "country": "UK",
+            "age_group": "10s",
+            "gender": "female",
+            "degree": 5,
+            "mutual_friends": 2,
+            "mutual_friend_ids": [
+              19785,
+              61485
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 7
+          },
+          {
+            "id": 68336,
+            "label": "User 68336",
+            "country": "UK",
+            "age_group": null,
+            "gender": "male",
+            "degree": 480,
+            "mutual_friends": 2,
+            "mutual_friend_ids": [
+              9724,
+              50313
+            ],
+            "same_country": true,
+            "same_age_group": false,
+            "same_gender": false,
+            "shared_attribute_count": 1,
+            "score": 5
+          },
+          {
+            "id": 43377,
+            "label": "User 43377",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "male",
+            "degree": 103,
+            "mutual_friends": 2,
+            "mutual_friend_ids": [
+              7780,
+              58345
+            ],
+            "same_country": true,
+            "same_age_group": false,
+            "same_gender": false,
+            "shared_attribute_count": 1,
+            "score": 5
+          },
+          {
+            "id": 53921,
+            "label": "User 53921",
+            "country": "UK",
+            "age_group": null,
+            "gender": "female",
+            "degree": 52,
+            "mutual_friends": 2,
+            "mutual_friend_ids": [
+              9724,
+              50313
+            ],
+            "same_country": true,
+            "same_age_group": false,
+            "same_gender": true,
+            "shared_attribute_count": 2,
+            "score": 6
+          },
+          {
+            "id": 20364,
+            "label": "User 20364",
+            "country": "UK",
+            "age_group": null,
+            "gender": "female",
+            "degree": 52,
+            "mutual_friends": 2,
+            "mutual_friend_ids": [
+              9724,
+              50313
+            ],
+            "same_country": true,
+            "same_age_group": false,
+            "same_gender": true,
+            "shared_attribute_count": 2,
+            "score": 6
+          },
+          {
+            "id": 19226,
+            "label": "User 19226",
+            "country": "UK",
+            "age_group": null,
+            "gender": "female",
+            "degree": 37,
+            "mutual_friends": 2,
+            "mutual_friend_ids": [
+              2282,
+              9724
+            ],
+            "same_country": true,
+            "same_age_group": false,
+            "same_gender": true,
+            "shared_attribute_count": 2,
+            "score": 6
+          },
+          {
+            "id": 61881,
+            "label": "User 61881",
+            "country": "UK",
+            "age_group": null,
+            "gender": "female",
+            "degree": 31,
+            "mutual_friends": 2,
+            "mutual_friend_ids": [
+              7780,
+              9724
+            ],
+            "same_country": true,
+            "same_age_group": false,
+            "same_gender": true,
+            "shared_attribute_count": 2,
+            "score": 6
+          },
+          {
+            "id": 15545,
+            "label": "User 15545",
+            "country": "UK",
+            "age_group": null,
+            "gender": "female",
+            "degree": 19,
+            "mutual_friends": 2,
+            "mutual_friend_ids": [
+              9724,
+              19785
+            ],
+            "same_country": true,
+            "same_age_group": false,
+            "same_gender": true,
+            "shared_attribute_count": 2,
+            "score": 6
+          },
+          {
+            "id": 72730,
+            "label": "User 72730",
+            "country": "UK",
+            "age_group": null,
+            "gender": "female",
+            "degree": 18,
+            "mutual_friends": 2,
+            "mutual_friend_ids": [
+              7780,
+              73125
+            ],
+            "same_country": true,
+            "same_age_group": false,
+            "same_gender": true,
+            "shared_attribute_count": 2,
+            "score": 6
+          },
+          {
+            "id": 5909,
+            "label": "User 5909",
+            "country": "UK",
+            "age_group": "10s",
+            "gender": "not_shared",
+            "degree": 2013,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              44506
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 39843,
+            "label": "User 39843",
+            "country": "UK",
+            "age_group": "10s",
+            "gender": "female",
+            "degree": 274,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              9724
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 31467,
+            "label": "User 31467",
+            "country": "UK",
+            "age_group": "10s",
+            "gender": "male",
+            "degree": 250,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              9724
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 74859,
+            "label": "User 74859",
+            "country": "UK",
+            "age_group": "10s",
+            "gender": "female",
+            "degree": 158,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              9724
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 55425,
+            "label": "User 55425",
+            "country": "UK",
+            "age_group": "10s",
+            "gender": "female",
+            "degree": 110,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              50641
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 2176,
+            "label": "User 2176",
+            "country": "UK",
+            "age_group": "10s",
+            "gender": "female",
+            "degree": 104,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              19744
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 15122,
+            "label": "User 15122",
+            "country": "UK",
+            "age_group": "10s",
+            "gender": "male",
+            "degree": 93,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              58345
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 66855,
+            "label": "User 66855",
+            "country": "UK",
+            "age_group": "10s",
+            "gender": "not_shared",
+            "degree": 92,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              44506
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 5303,
+            "label": "User 5303",
+            "country": "UK",
+            "age_group": "10s",
+            "gender": "male",
+            "degree": 84,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              19744
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 20186,
+            "label": "User 20186",
+            "country": "UK",
+            "age_group": "10s",
+            "gender": "female",
+            "degree": 83,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              9724
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 74221,
+            "label": "User 74221",
+            "country": "UK",
+            "age_group": "10s",
+            "gender": "male",
+            "degree": 73,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              44506
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 57856,
+            "label": "User 57856",
+            "country": "UK",
+            "age_group": "10s",
+            "gender": "male",
+            "degree": 69,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              43964
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 11323,
+            "label": "User 11323",
+            "country": "UK",
+            "age_group": "10s",
+            "gender": "not_shared",
+            "degree": 68,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              9724
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 49941,
+            "label": "User 49941",
+            "country": "UK",
+            "age_group": "10s",
+            "gender": "female",
+            "degree": 55,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              9724
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 9044,
+            "label": "User 9044",
+            "country": "UK",
+            "age_group": "10s",
+            "gender": "male",
+            "degree": 52,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              19744
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 26848,
+            "label": "User 26848",
+            "country": "UK",
+            "age_group": "10s",
+            "gender": "female",
+            "degree": 50,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              50313
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 7217,
+            "label": "User 7217",
+            "country": "UK",
+            "age_group": "10s",
+            "gender": "female",
+            "degree": 49,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              43690
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 71523,
+            "label": "User 71523",
+            "country": "UK",
+            "age_group": "10s",
+            "gender": "female",
+            "degree": 48,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              9724
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 53833,
+            "label": "User 53833",
+            "country": "UK",
+            "age_group": "10s",
+            "gender": "male",
+            "degree": 47,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              9724
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
           }
         ]
       },
@@ -2018,6 +3923,7 @@ window.MILESTONE_DATA = {
           "ring": "root",
           "country": "UK",
           "age_group": "20s",
+          "gender": "female",
           "degree": 15
         },
         "summary": {
@@ -2038,6 +3944,7 @@ window.MILESTONE_DATA = {
             "ring": "root",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 15
           },
           {
@@ -2046,6 +3953,7 @@ window.MILESTONE_DATA = {
             "ring": "first",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 34
           },
           {
@@ -2054,6 +3962,7 @@ window.MILESTONE_DATA = {
             "ring": "first",
             "country": "UK",
             "age_group": "10s",
+            "gender": "female",
             "degree": 4
           },
           {
@@ -2062,6 +3971,7 @@ window.MILESTONE_DATA = {
             "ring": "first",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 7
           },
           {
@@ -2070,6 +3980,7 @@ window.MILESTONE_DATA = {
             "ring": "first",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 1
           },
           {
@@ -2078,6 +3989,7 @@ window.MILESTONE_DATA = {
             "ring": "first",
             "country": "UK",
             "age_group": "20s",
+            "gender": "not_shared",
             "degree": 31
           },
           {
@@ -2086,6 +3998,7 @@ window.MILESTONE_DATA = {
             "ring": "first",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 8
           },
           {
@@ -2094,6 +4007,7 @@ window.MILESTONE_DATA = {
             "ring": "first",
             "country": "UK",
             "age_group": "20s",
+            "gender": "not_shared",
             "degree": 12
           },
           {
@@ -2102,6 +4016,7 @@ window.MILESTONE_DATA = {
             "ring": "first",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 5
           },
           {
@@ -2110,6 +4025,7 @@ window.MILESTONE_DATA = {
             "ring": "first",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 13
           },
           {
@@ -2118,6 +4034,7 @@ window.MILESTONE_DATA = {
             "ring": "first",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 33
           },
           {
@@ -2126,6 +4043,7 @@ window.MILESTONE_DATA = {
             "ring": "first",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 34
           },
           {
@@ -2134,6 +4052,7 @@ window.MILESTONE_DATA = {
             "ring": "first",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 8
           },
           {
@@ -2142,6 +4061,7 @@ window.MILESTONE_DATA = {
             "ring": "first",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 24
           },
           {
@@ -2150,6 +4070,7 @@ window.MILESTONE_DATA = {
             "ring": "first",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 13
           },
           {
@@ -2158,6 +4079,7 @@ window.MILESTONE_DATA = {
             "ring": "first",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 3
           },
           {
@@ -2166,6 +4088,7 @@ window.MILESTONE_DATA = {
             "ring": "second",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 38
           },
           {
@@ -2174,6 +4097,7 @@ window.MILESTONE_DATA = {
             "ring": "second",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 24
           },
           {
@@ -2182,6 +4106,7 @@ window.MILESTONE_DATA = {
             "ring": "second",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 12
           },
           {
@@ -2190,6 +4115,7 @@ window.MILESTONE_DATA = {
             "ring": "second",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 9
           },
           {
@@ -2198,6 +4124,7 @@ window.MILESTONE_DATA = {
             "ring": "second",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 9
           },
           {
@@ -2206,6 +4133,7 @@ window.MILESTONE_DATA = {
             "ring": "second",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 9
           },
           {
@@ -2214,6 +4142,7 @@ window.MILESTONE_DATA = {
             "ring": "second",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 8
           },
           {
@@ -2222,6 +4151,7 @@ window.MILESTONE_DATA = {
             "ring": "second",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 7
           },
           {
@@ -2230,6 +4160,7 @@ window.MILESTONE_DATA = {
             "ring": "second",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 6
           },
           {
@@ -2238,6 +4169,7 @@ window.MILESTONE_DATA = {
             "ring": "second",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 244
           },
           {
@@ -2246,6 +4178,7 @@ window.MILESTONE_DATA = {
             "ring": "second",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 149
           },
           {
@@ -2254,6 +4187,7 @@ window.MILESTONE_DATA = {
             "ring": "second",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 126
           },
           {
@@ -2262,6 +4196,7 @@ window.MILESTONE_DATA = {
             "ring": "second",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 115
           },
           {
@@ -2270,6 +4205,7 @@ window.MILESTONE_DATA = {
             "ring": "second",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 97
           },
           {
@@ -2278,6 +4214,7 @@ window.MILESTONE_DATA = {
             "ring": "second",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 91
           },
           {
@@ -2286,6 +4223,7 @@ window.MILESTONE_DATA = {
             "ring": "second",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 86
           }
         ],
@@ -2457,6 +4395,7 @@ window.MILESTONE_DATA = {
             "label": "User 1510",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 34,
             "bridge_count": 6,
             "bridge_candidates": [
@@ -2473,6 +4412,7 @@ window.MILESTONE_DATA = {
             "label": "User 2392",
             "country": "UK",
             "age_group": "10s",
+            "gender": "female",
             "degree": 4,
             "bridge_count": 0,
             "bridge_candidates": []
@@ -2482,6 +4422,7 @@ window.MILESTONE_DATA = {
             "label": "User 5454",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 7,
             "bridge_count": 0,
             "bridge_candidates": []
@@ -2491,6 +4432,7 @@ window.MILESTONE_DATA = {
             "label": "User 10337",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 1,
             "bridge_count": 0,
             "bridge_candidates": []
@@ -2500,6 +4442,7 @@ window.MILESTONE_DATA = {
             "label": "User 13156",
             "country": "UK",
             "age_group": "20s",
+            "gender": "not_shared",
             "degree": 31,
             "bridge_count": 2,
             "bridge_candidates": [
@@ -2512,6 +4455,7 @@ window.MILESTONE_DATA = {
             "label": "User 17077",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 8,
             "bridge_count": 0,
             "bridge_candidates": []
@@ -2521,6 +4465,7 @@ window.MILESTONE_DATA = {
             "label": "User 21649",
             "country": "UK",
             "age_group": "20s",
+            "gender": "not_shared",
             "degree": 12,
             "bridge_count": 4,
             "bridge_candidates": [
@@ -2535,6 +4480,7 @@ window.MILESTONE_DATA = {
             "label": "User 22826",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 5,
             "bridge_count": 1,
             "bridge_candidates": [
@@ -2546,6 +4492,7 @@ window.MILESTONE_DATA = {
             "label": "User 39595",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 13,
             "bridge_count": 2,
             "bridge_candidates": [
@@ -2558,6 +4505,7 @@ window.MILESTONE_DATA = {
             "label": "User 51077",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 33,
             "bridge_count": 1,
             "bridge_candidates": [
@@ -2569,6 +4517,7 @@ window.MILESTONE_DATA = {
             "label": "User 55373",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 34,
             "bridge_count": 4,
             "bridge_candidates": [
@@ -2583,6 +4532,7 @@ window.MILESTONE_DATA = {
             "label": "User 68132",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 8,
             "bridge_count": 3,
             "bridge_candidates": [
@@ -2596,6 +4546,7 @@ window.MILESTONE_DATA = {
             "label": "User 68439",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 24,
             "bridge_count": 2,
             "bridge_candidates": [
@@ -2608,6 +4559,7 @@ window.MILESTONE_DATA = {
             "label": "User 69152",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 13,
             "bridge_count": 0,
             "bridge_candidates": []
@@ -2617,6 +4569,7 @@ window.MILESTONE_DATA = {
             "label": "User 75386",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 3,
             "bridge_count": 0,
             "bridge_candidates": []
@@ -2628,6 +4581,7 @@ window.MILESTONE_DATA = {
             "label": "User 67881",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 38,
             "mutual_friends": 2,
             "mutual_friend_ids": [
@@ -2636,14 +4590,16 @@ window.MILESTONE_DATA = {
             ],
             "same_country": true,
             "same_age_group": true,
-            "shared_attribute_count": 2,
-            "score": 6
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 7
           },
           {
             "id": 18614,
             "label": "User 18614",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 24,
             "mutual_friends": 2,
             "mutual_friend_ids": [
@@ -2652,6 +4608,7 @@ window.MILESTONE_DATA = {
             ],
             "same_country": true,
             "same_age_group": true,
+            "same_gender": false,
             "shared_attribute_count": 2,
             "score": 6
           },
@@ -2660,6 +4617,7 @@ window.MILESTONE_DATA = {
             "label": "User 10616",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 12,
             "mutual_friends": 2,
             "mutual_friend_ids": [
@@ -2668,14 +4626,16 @@ window.MILESTONE_DATA = {
             ],
             "same_country": true,
             "same_age_group": true,
-            "shared_attribute_count": 2,
-            "score": 6
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 7
           },
           {
             "id": 46753,
             "label": "User 46753",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 9,
             "mutual_friends": 2,
             "mutual_friend_ids": [
@@ -2684,6 +4644,7 @@ window.MILESTONE_DATA = {
             ],
             "same_country": true,
             "same_age_group": true,
+            "same_gender": false,
             "shared_attribute_count": 2,
             "score": 6
           },
@@ -2692,6 +4653,7 @@ window.MILESTONE_DATA = {
             "label": "User 25967",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 9,
             "mutual_friends": 2,
             "mutual_friend_ids": [
@@ -2700,6 +4662,7 @@ window.MILESTONE_DATA = {
             ],
             "same_country": true,
             "same_age_group": true,
+            "same_gender": false,
             "shared_attribute_count": 2,
             "score": 6
           },
@@ -2708,6 +4671,7 @@ window.MILESTONE_DATA = {
             "label": "User 57313",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 9,
             "mutual_friends": 2,
             "mutual_friend_ids": [
@@ -2716,6 +4680,7 @@ window.MILESTONE_DATA = {
             ],
             "same_country": true,
             "same_age_group": true,
+            "same_gender": false,
             "shared_attribute_count": 2,
             "score": 6
           },
@@ -2724,6 +4689,7 @@ window.MILESTONE_DATA = {
             "label": "User 71631",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 8,
             "mutual_friends": 2,
             "mutual_friend_ids": [
@@ -2732,6 +4698,7 @@ window.MILESTONE_DATA = {
             ],
             "same_country": true,
             "same_age_group": true,
+            "same_gender": false,
             "shared_attribute_count": 2,
             "score": 6
           },
@@ -2740,6 +4707,7 @@ window.MILESTONE_DATA = {
             "label": "User 34528",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 7,
             "mutual_friends": 2,
             "mutual_friend_ids": [
@@ -2748,6 +4716,7 @@ window.MILESTONE_DATA = {
             ],
             "same_country": true,
             "same_age_group": true,
+            "same_gender": false,
             "shared_attribute_count": 2,
             "score": 6
           },
@@ -2756,6 +4725,7 @@ window.MILESTONE_DATA = {
             "label": "User 50146",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 6,
             "mutual_friends": 2,
             "mutual_friend_ids": [
@@ -2764,14 +4734,16 @@ window.MILESTONE_DATA = {
             ],
             "same_country": true,
             "same_age_group": true,
-            "shared_attribute_count": 2,
-            "score": 6
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 7
           },
           {
             "id": 40593,
             "label": "User 40593",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 244,
             "mutual_friends": 1,
             "mutual_friend_ids": [
@@ -2779,6 +4751,7 @@ window.MILESTONE_DATA = {
             ],
             "same_country": true,
             "same_age_group": true,
+            "same_gender": false,
             "shared_attribute_count": 2,
             "score": 4
           },
@@ -2787,6 +4760,7 @@ window.MILESTONE_DATA = {
             "label": "User 16767",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 149,
             "mutual_friends": 1,
             "mutual_friend_ids": [
@@ -2794,14 +4768,16 @@ window.MILESTONE_DATA = {
             ],
             "same_country": true,
             "same_age_group": true,
-            "shared_attribute_count": 2,
-            "score": 4
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
           },
           {
             "id": 4686,
             "label": "User 4686",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 126,
             "mutual_friends": 1,
             "mutual_friend_ids": [
@@ -2809,6 +4785,7 @@ window.MILESTONE_DATA = {
             ],
             "same_country": true,
             "same_age_group": true,
+            "same_gender": false,
             "shared_attribute_count": 2,
             "score": 4
           },
@@ -2817,6 +4794,7 @@ window.MILESTONE_DATA = {
             "label": "User 7942",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 115,
             "mutual_friends": 1,
             "mutual_friend_ids": [
@@ -2824,14 +4802,16 @@ window.MILESTONE_DATA = {
             ],
             "same_country": true,
             "same_age_group": true,
-            "shared_attribute_count": 2,
-            "score": 4
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
           },
           {
             "id": 18521,
             "label": "User 18521",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 97,
             "mutual_friends": 1,
             "mutual_friend_ids": [
@@ -2839,6 +4819,7 @@ window.MILESTONE_DATA = {
             ],
             "same_country": true,
             "same_age_group": true,
+            "same_gender": false,
             "shared_attribute_count": 2,
             "score": 4
           },
@@ -2847,6 +4828,7 @@ window.MILESTONE_DATA = {
             "label": "User 73265",
             "country": "UK",
             "age_group": "20s",
+            "gender": "male",
             "degree": 91,
             "mutual_friends": 1,
             "mutual_friend_ids": [
@@ -2854,6 +4836,7 @@ window.MILESTONE_DATA = {
             ],
             "same_country": true,
             "same_age_group": true,
+            "same_gender": false,
             "shared_attribute_count": 2,
             "score": 4
           },
@@ -2862,6 +4845,7 @@ window.MILESTONE_DATA = {
             "label": "User 50858",
             "country": "UK",
             "age_group": "20s",
+            "gender": "female",
             "degree": 86,
             "mutual_friends": 1,
             "mutual_friend_ids": [
@@ -2869,8 +4853,870 @@ window.MILESTONE_DATA = {
             ],
             "same_country": true,
             "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          }
+        ],
+        "finder_candidates": [
+          {
+            "id": 67881,
+            "label": "User 67881",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "female",
+            "degree": 38,
+            "mutual_friends": 2,
+            "mutual_friend_ids": [
+              13156,
+              68439
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 7
+          },
+          {
+            "id": 18614,
+            "label": "User 18614",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "male",
+            "degree": 24,
+            "mutual_friends": 2,
+            "mutual_friend_ids": [
+              55373,
+              68132
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 6
+          },
+          {
+            "id": 10616,
+            "label": "User 10616",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "female",
+            "degree": 12,
+            "mutual_friends": 2,
+            "mutual_friend_ids": [
+              1510,
+              68439
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 7
+          },
+          {
+            "id": 46753,
+            "label": "User 46753",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "male",
+            "degree": 9,
+            "mutual_friends": 2,
+            "mutual_friend_ids": [
+              1510,
+              21649
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 6
+          },
+          {
+            "id": 25967,
+            "label": "User 25967",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "male",
+            "degree": 9,
+            "mutual_friends": 2,
+            "mutual_friend_ids": [
+              1510,
+              21649
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 6
+          },
+          {
+            "id": 57313,
+            "label": "User 57313",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "male",
+            "degree": 9,
+            "mutual_friends": 2,
+            "mutual_friend_ids": [
+              1510,
+              21649
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 6
+          },
+          {
+            "id": 71631,
+            "label": "User 71631",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "male",
+            "degree": 8,
+            "mutual_friends": 2,
+            "mutual_friend_ids": [
+              1510,
+              21649
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 6
+          },
+          {
+            "id": 34528,
+            "label": "User 34528",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "male",
+            "degree": 7,
+            "mutual_friends": 2,
+            "mutual_friend_ids": [
+              55373,
+              68132
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 6
+          },
+          {
+            "id": 50146,
+            "label": "User 50146",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "female",
+            "degree": 6,
+            "mutual_friends": 2,
+            "mutual_friend_ids": [
+              55373,
+              68132
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 7
+          },
+          {
+            "id": 40593,
+            "label": "User 40593",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "male",
+            "degree": 244,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              39595
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
             "shared_attribute_count": 2,
             "score": 4
+          },
+          {
+            "id": 16767,
+            "label": "User 16767",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "female",
+            "degree": 149,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              51077
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 4686,
+            "label": "User 4686",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "male",
+            "degree": 126,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              39595
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 7942,
+            "label": "User 7942",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "female",
+            "degree": 115,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              22826
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 18521,
+            "label": "User 18521",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "male",
+            "degree": 97,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              1510
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 73265,
+            "label": "User 73265",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "male",
+            "degree": 91,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              55373
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 50858,
+            "label": "User 50858",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "female",
+            "degree": 86,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              13156
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 75792,
+            "label": "User 75792",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "male",
+            "degree": 78,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              2392
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 30366,
+            "label": "User 30366",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "male",
+            "degree": 71,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              1510
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 62830,
+            "label": "User 62830",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "male",
+            "degree": 67,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              13156
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 12461,
+            "label": "User 12461",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "female",
+            "degree": 66,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              51077
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 67324,
+            "label": "User 67324",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "female",
+            "degree": 56,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              1510
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 63818,
+            "label": "User 63818",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "male",
+            "degree": 48,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              39595
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 74800,
+            "label": "User 74800",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "male",
+            "degree": 46,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              13156
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 53414,
+            "label": "User 53414",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "not_shared",
+            "degree": 46,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              17077
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 46150,
+            "label": "User 46150",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "female",
+            "degree": 42,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              51077
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 55426,
+            "label": "User 55426",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "female",
+            "degree": 42,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              13156
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 38690,
+            "label": "User 38690",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "male",
+            "degree": 40,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              21649
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 12069,
+            "label": "User 12069",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "male",
+            "degree": 40,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              69152
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 36517,
+            "label": "User 36517",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "female",
+            "degree": 39,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              51077
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 27510,
+            "label": "User 27510",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "female",
+            "degree": 39,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              39595
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 2429,
+            "label": "User 2429",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "female",
+            "degree": 37,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              51077
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 47426,
+            "label": "User 47426",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "male",
+            "degree": 36,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              17077
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 11911,
+            "label": "User 11911",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "male",
+            "degree": 35,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              1510
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 75611,
+            "label": "User 75611",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "female",
+            "degree": 34,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              21649
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 25164,
+            "label": "User 25164",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "female",
+            "degree": 33,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              68439
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 15296,
+            "label": "User 15296",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "male",
+            "degree": 33,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              39595
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 23765,
+            "label": "User 23765",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "not_shared",
+            "degree": 32,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              17077
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 3224,
+            "label": "User 3224",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "not_shared",
+            "degree": 31,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              68132
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 9887,
+            "label": "User 9887",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "male",
+            "degree": 31,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              5454
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 11270,
+            "label": "User 11270",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "male",
+            "degree": 29,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              17077
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 59910,
+            "label": "User 59910",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "male",
+            "degree": 28,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              55373
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 32780,
+            "label": "User 32780",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "male",
+            "degree": 26,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              68132
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 19494,
+            "label": "User 19494",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "female",
+            "degree": 26,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              69152
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 28298,
+            "label": "User 28298",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "female",
+            "degree": 26,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              68439
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
+          },
+          {
+            "id": 71222,
+            "label": "User 71222",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "male",
+            "degree": 25,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              68439
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 9566,
+            "label": "User 9566",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "male",
+            "degree": 25,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              55373
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 2669,
+            "label": "User 2669",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "male",
+            "degree": 24,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              13156
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 45337,
+            "label": "User 45337",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "not_shared",
+            "degree": 24,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              55373
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 44672,
+            "label": "User 44672",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "male",
+            "degree": 23,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              39595
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": false,
+            "shared_attribute_count": 2,
+            "score": 4
+          },
+          {
+            "id": 31913,
+            "label": "User 31913",
+            "country": "UK",
+            "age_group": "20s",
+            "gender": "female",
+            "degree": 23,
+            "mutual_friends": 1,
+            "mutual_friend_ids": [
+              22826
+            ],
+            "same_country": true,
+            "same_age_group": true,
+            "same_gender": true,
+            "shared_attribute_count": 3,
+            "score": 5
           }
         ]
       }

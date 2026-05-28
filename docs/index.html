@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css?v=v2">
+  <link rel="stylesheet" href="./styles.css?v=v3">
 </head>
 <body>
 
@@ -38,8 +38,86 @@
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><polygon points="3,1 13,7 3,13" fill="currentColor"/></svg>
         Story Mode
       </button>
+      <button class="nav-finder-btn" id="finder-mode-btn">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="6" cy="6" r="4.5" stroke="currentColor" stroke-width="1.5"/><line x1="9.5" y1="9.5" x2="13" y2="13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        Find a Match
+      </button>
     </div>
   </nav>
+
+  <!-- ─── Find a Match wizard overlay ─────────────────────────────────────── -->
+  <div class="finder-overlay" id="finder-overlay" style="display:none">
+    <div class="finder-panel">
+
+      <!-- Screen 1: Choose Persona -->
+      <div class="finder-screen" id="finder-screen-1">
+        <div class="finder-screen-header">
+          <div>
+            <p class="eyebrow">Choose Your Persona</p>
+            <h2>Who do you want to be?</h2>
+          </div>
+          <button class="story-close" id="finder-close-1">✕</button>
+        </div>
+        <div id="finder-s1-profile" class="finder-profile"></div>
+        <div class="finder-screen-footer">
+          <span class="finder-hint">Pick a user — explore their second-degree world</span>
+          <button class="story-nav-btn primary" id="finder-s1-next">Search connections →</button>
+        </div>
+      </div>
+
+      <!-- Screen 2: Search + Graph -->
+      <div class="finder-screen" id="finder-screen-2" style="display:none">
+        <div class="finder-screen-header">
+          <div>
+            <p class="eyebrow">Search</p>
+            <h2 id="finder-s2-title">Who are you looking for?</h2>
+          </div>
+          <button class="story-close" id="finder-close-2">✕</button>
+        </div>
+        <div class="finder-filters">
+          <label class="finder-field">
+            <span>Country</span>
+            <div class="finder-country-static">UK</div>
+          </label>
+          <label class="finder-field">
+            <span>Age group</span>
+            <select id="finder-age"></select>
+          </label>
+          <label class="finder-field">
+            <span>Gender</span>
+            <select id="finder-gender"></select>
+          </label>
+          <label class="finder-field">
+            <span>Mutual friends</span>
+            <select id="finder-mutual"></select>
+          </label>
+        </div>
+        <div id="finder-graph-container" class="finder-graph-container"></div>
+        <div class="finder-screen-footer">
+          <button class="story-nav-btn" id="finder-s2-back">← Back</button>
+          <span class="finder-hint" id="finder-results-hint">Click a node to see the introduction path</span>
+        </div>
+      </div>
+
+      <!-- Screen 3: Bridge Reveal -->
+      <div class="finder-screen" id="finder-screen-3" style="display:none">
+        <div class="finder-screen-header">
+          <div>
+            <p class="eyebrow">Your Path</p>
+            <h2 id="finder-s3-title">Connection found</h2>
+          </div>
+          <button class="story-close" id="finder-close-3">✕</button>
+        </div>
+        <div id="finder-s3-visual" class="finder-bridge-visual"></div>
+        <div id="finder-s3-detail" class="finder-bridge-detail"></div>
+        <div class="finder-screen-footer">
+          <button class="story-nav-btn" id="finder-s3-back">← Back to results</button>
+          <button class="story-nav-btn primary" id="finder-s3-explore">Explore in graph →</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
 
   <!-- ─── Story mode overlay ─────────────────────────────────────────────── -->
   <div class="story-overlay" id="story-overlay" style="display:none">
@@ -319,7 +397,7 @@
   </div>
 
   <script src="https://d3js.org/d3.v7.min.js"></script>
-  <script src="./data.js?v=v2"></script>
-  <script src="./app.js?v=v2"></script>
+  <script src="./data.js?v=v3"></script>
+  <script src="./app.js?v=v3"></script>
 </body>
 </html>

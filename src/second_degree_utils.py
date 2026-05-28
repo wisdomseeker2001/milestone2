@@ -188,6 +188,7 @@ def build_ego_case(
             "ring": ring,
             "country": None if pd.isna(row["country"]) else str(row["country"]),
             "age_group": None if pd.isna(row["age_group"]) else str(row["age_group"]),
+            "gender": None if pd.isna(row["gender"]) else str(row["gender"]),
             "degree": int(row["degree"]) if not pd.isna(row["degree"]) else len(adjacency.get(int(node_id), set())),
         }
 
@@ -222,17 +223,22 @@ def build_ego_case(
                 "label": f"User {int(friend_id)}",
                 "country": None if pd.isna(friend_row["country"]) else str(friend_row["country"]),
                 "age_group": None if pd.isna(friend_row["age_group"]) else str(friend_row["age_group"]),
+                "gender": None if pd.isna(friend_row["gender"]) else str(friend_row["gender"]),
                 "degree": int(friend_row["degree"]),
                 "bridge_count": int(len(bridge_candidates)),
                 "bridge_candidates": [int(candidate_id) for candidate_id in bridge_candidates],
             }
         )
 
+    ego_gender = str(root_user["gender"]) if pd.notna(root_user["gender"]) else "unknown"
+
     candidates_payload = []
     for candidate_id in ranked_candidates:
         candidate_row = meta.loc[int(candidate_id)]
         same_country = country_match_with_root(int(candidate_id))
         same_age_group = age_group_match_with_root(int(candidate_id))
+        cand_gender = str(candidate_row["gender"]) if pd.notna(candidate_row["gender"]) else "unknown"
+        same_gender = ego_gender == cand_gender and ego_gender not in ("unknown", "not_shared")
         mutual_friend_ids = sorted(int(friend_id) for friend_id in user_friends.intersection(adjacency.get(int(candidate_id), set())))
         candidates_payload.append(
             {
@@ -240,13 +246,15 @@ def build_ego_case(
                 "label": f"User {int(candidate_id)}",
                 "country": None if pd.isna(candidate_row["country"]) else str(candidate_row["country"]),
                 "age_group": None if pd.isna(candidate_row["age_group"]) else str(candidate_row["age_group"]),
+                "gender": cand_gender,
                 "degree": int(candidate_row["degree"]),
                 "mutual_friends": int(mutual_counts.get(int(candidate_id), 0)),
                 "mutual_friend_ids": mutual_friend_ids,
                 "same_country": bool(same_country),
                 "same_age_group": bool(same_age_group),
-                "shared_attribute_count": int(same_country) + int(same_age_group),
-                "score": int(mutual_counts.get(int(candidate_id), 0)) * 2 + int(same_country) + int(same_age_group),
+                "same_gender": bool(same_gender),
+                "shared_attribute_count": int(same_country) + int(same_age_group) + int(same_gender),
+                "score": int(mutual_counts.get(int(candidate_id), 0)) * 2 + int(same_country) + int(same_age_group) + int(same_gender),
             }
         )
 

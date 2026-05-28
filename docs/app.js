@@ -88,6 +88,7 @@ function boot() {
   bindNav();
   bindStoryMode();
   bindTweaks();
+  bindFinder();
   applyTheme(tweaks.accentTheme);
   render();
 
@@ -1549,7 +1550,7 @@ function createSvg(width, height) {
   const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
   svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
   svg.setAttribute("width", "100%");
-  svg.setAttribute("height", "auto");
+  svg.style.height = "auto";
   return svg;
 }
 function createCircle(cx, cy, r, fill) {
@@ -1652,6 +1653,374 @@ function createHalo(cx, cy, r) {
   el.setAttribute("fill", "none");
   el.setAttribute("stroke", "rgba(217,166,79,0.55)"); el.setAttribute("stroke-width", "2");
   return el;
+}
+
+// ─── Find a Match wizard ──────────────────────────────────────────────────────
+
+const finderState = {
+  caseIndex:         0,
+  age_group:         "any",
+  gender:            "any",
+  min_mutual:        0,
+  selectedCandidate: null,
+};
+
+function getFinderCase() {
+  return data.prototype.cases[finderState.caseIndex] || data.prototype.cases[0];
+}
+
+function bindFinder() {
+  const overlay = document.getElementById("finder-overlay");
+  const openBtn = document.getElementById("finder-mode-btn");
+  const screens = {
+    s1: document.getElementById("finder-screen-1"),
+    s2: document.getElementById("finder-screen-2"),
+    s3: document.getElementById("finder-screen-3"),
+  };
+
+  function showScreen(name) {
+    Object.keys(screens).forEach((k) => {
+      screens[k].style.display = k === name ? "flex" : "none";
+    });
+  }
+
+  function openFinder() {
+    finderState.age_group         = "any";
+    finderState.gender            = "any";
+    finderState.min_mutual        = 0;
+    finderState.selectedCandidate = null;
+    renderFinderScreen1();
+    showScreen("s1");
+    overlay.style.display = "flex";
+  }
+
+  function closeFinder() { overlay.style.display = "none"; }
+
+  openBtn.addEventListener("click", openFinder);
+  ["finder-close-1", "finder-close-2", "finder-close-3"].forEach((id) => {
+    document.getElementById(id).addEventListener("click", closeFinder);
+  });
+  overlay.addEventListener("click", (e) => { if (e.target === overlay) closeFinder(); });
+  document.addEventListener("keydown", (e) => {
+    if (overlay.style.display !== "none" && e.key === "Escape") closeFinder();
+  });
+
+  document.getElementById("finder-s1-next").addEventListener("click", () => {
+    renderFinderScreen2();
+    showScreen("s2");
+  });
+  document.getElementById("finder-s2-back").addEventListener("click", () => showScreen("s1"));
+  document.getElementById("finder-s3-back").addEventListener("click", () => {
+    renderFinderScreen2();
+    showScreen("s2");
+  });
+  document.getElementById("finder-s3-explore").addEventListener("click", () => {
+    if (finderState.selectedCandidate) {
+      state.selectedCandidateId = String(finderState.selectedCandidate.id);
+      render();
+    }
+    closeFinder();
+    document.getElementById("explorer").scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+
+  populateFinderSelects();
+}
+
+function populateFinderSelects() {
+  const ageGroups    = ["10s", "20s", "30s", "40s", "50s", "60+"];
+  const ageSelect    = document.getElementById("finder-age");
+  const genderSelect = document.getElementById("finder-gender");
+  const mutualSelect = document.getElementById("finder-mutual");
+
+  [["any", "Any age"], ...ageGroups.map((a) => [a, a])].forEach(([v, l]) => {
+    const opt = document.createElement("option"); opt.value = v; opt.textContent = l;
+    ageSelect.appendChild(opt);
+  });
+  [["any", "Any gender"], ["male", "Male"], ["female", "Female"], ["not_shared", "Not shared"]].forEach(([v, l]) => {
+    const opt = document.createElement("option"); opt.value = v; opt.textContent = l;
+    genderSelect.appendChild(opt);
+  });
+  [["0", "Any"], ["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"]].forEach(([v, l]) => {
+    const opt = document.createElement("option"); opt.value = v; opt.textContent = l;
+    mutualSelect.appendChild(opt);
+  });
+
+  [ageSelect, genderSelect, mutualSelect].forEach((sel) => {
+    sel.addEventListener("change", () => {
+      finderState.age_group  = ageSelect.value;
+      finderState.gender     = genderSelect.value;
+      finderState.min_mutual = parseInt(mutualSelect.value, 10) || 0;
+      renderFinderCandidates();
+    });
+  });
+}
+
+function renderFinderScreen1() {
+  const container = document.getElementById("finder-s1-profile");
+  container.replaceChildren();
+
+  const grid = document.createElement("div");
+  grid.className = "finder-persona-grid";
+
+  data.prototype.cases.forEach((c, i) => {
+    const btn = document.createElement("button");
+    btn.className = "finder-persona-card" + (i === finderState.caseIndex ? " selected" : "");
+    btn.innerHTML = `
+      <strong>User ${c.user.id}</strong>
+      <p>${c.user.age_group || "?"} · ${c.user.gender || "?"} · ${c.user.country || "?"}</p>
+      <div class="finder-persona-stats">
+        <span>${c.summary.direct_friends} friends</span>
+        <span>${formatCompact(c.summary.second_degree_count)} reachable</span>
+      </div>`;
+    btn.addEventListener("click", () => {
+      finderState.caseIndex = i;
+      renderFinderScreen1();
+    });
+    grid.appendChild(btn);
+  });
+
+  container.appendChild(grid);
+}
+
+function renderFinderScreen2() {
+  document.getElementById("finder-age").value    = finderState.age_group;
+  document.getElementById("finder-gender").value = finderState.gender;
+  document.getElementById("finder-mutual").value = String(finderState.min_mutual);
+  const sc = getFinderCase();
+  document.getElementById("finder-s2-title").textContent =
+    `Who should we find for User ${sc.user.id}?`;
+  renderFinderCandidates();
+}
+
+function renderFinderCandidates() {
+  const sc      = getFinderCase();
+  let results   = [...(sc.finder_candidates || sc.candidates)];
+
+  if (finderState.age_group !== "any") results = results.filter((c) => c.age_group === finderState.age_group);
+  if (finderState.gender    !== "any") results = results.filter((c) => c.gender    === finderState.gender);
+  if (finderState.min_mutual > 0)      results = results.filter((c) => c.mutual_friends === finderState.min_mutual);
+  results.sort((a, b) => b.score - a.score || b.mutual_friends - a.mutual_friends);
+
+  const hint = document.getElementById("finder-results-hint");
+  hint.textContent = results.length
+    ? `${results.length} match${results.length === 1 ? "" : "es"} — click a node to see the introduction`
+    : "No matches — try relaxing a filter";
+
+  renderFinderGraph(sc, results.slice(0, 24));
+}
+
+function renderFinderGraph(sc, matchedCandidates) {
+  const container = document.getElementById("finder-graph-container");
+  container.replaceChildren();
+
+  if (!matchedCandidates.length) return;
+
+  const W = container.clientWidth || 700;
+  const H = 300;
+  const cx = W / 2, cy = H / 2;
+
+  // Build bridge set from candidates' mutual_friend_ids so ALL 50 candidates
+  // have a bridge node in the graph (bridge_candidates only covers the top-16 pool)
+  const relevantBridgeIds = new Set(
+    matchedCandidates.flatMap((c) => c.mutual_friend_ids || [])
+  );
+  const relevantBridges = sc.direct_friends.filter((f) => relevantBridgeIds.has(f.id));
+
+  const nodes = [
+    { id: sc.user.id, group: 0, r: 20, color: palette.root, fx: cx, fy: cy },
+    ...relevantBridges.map((f) => ({ id: f.id, group: 1, r: 13, color: palette.first, data: f })),
+    ...matchedCandidates.map((c) => ({ id: c.id, group: 2, r: 10, color: palette.second, data: c })),
+  ];
+
+  const links = [];
+  relevantBridges.forEach((f) => links.push({ source: sc.user.id, target: f.id }));
+  matchedCandidates.forEach((c) => {
+    (c.mutual_friend_ids || []).forEach((fid) => {
+      if (relevantBridgeIds.has(fid)) links.push({ source: fid, target: c.id });
+    });
+  });
+
+  const sim = d3.forceSimulation(nodes)
+    .force("radial", d3.forceRadial(
+      (d) => d.group === 0 ? 0 : d.group === 1 ? 90 : 210, cx, cy
+    ).strength(0.85))
+    .force("charge",    d3.forceManyBody().strength(-60))
+    .force("link",      d3.forceLink(links).id((d) => d.id).strength(0.25).distance(80))
+    .force("collision", d3.forceCollide((d) => d.r + 5));
+
+  for (let i = 0; i < 300; i++) sim.tick();
+  sim.stop();
+
+  nodes.forEach((n) => {
+    n.x = Math.max(n.r + 4, Math.min(W - n.r - 4, n.x));
+    n.y = Math.max(n.r + 4, Math.min(H - n.r - 4, n.y));
+  });
+
+  const egoNode = nodes[0];
+
+  const svg = d3.create("svg")
+    .attr("viewBox", `0 0 ${W} ${H}`)
+    .attr("width", "100%")
+    .style("height", "auto");
+
+  // Hover path lines drawn on top of dim layer, behind nodes
+  const hoverLines = svg.append("g").attr("class", "finder-hover-lines");
+
+  const nodeSel = svg.append("g").selectAll("circle")
+    .data(nodes)
+    .join("circle")
+    .attr("cx",   (d) => d.x)
+    .attr("cy",   (d) => d.y)
+    .attr("r",    (d) => d.r)
+    .attr("fill", (d) => d.color)
+    .attr("stroke", "rgba(220,228,255,0.18)")
+    .attr("stroke-width", 1)
+    .attr("opacity", 1)
+    .style("cursor", (d) => d.group === 2 ? "pointer" : "default");
+
+  nodeSel
+    .on("mouseenter", function(event, d) {
+      if (d.group !== 2) return;
+
+      const mutualIds = new Set(d.data.mutual_friend_ids || []);
+      const bridges = nodes.filter((n) => n.group === 1 && mutualIds.has(n.id));
+      const highlight = new Set([egoNode.id, d.id, ...bridges.map((b) => b.id)]);
+
+      nodeSel
+        .attr("opacity", (n) => highlight.has(n.id) ? 1 : 0.12)
+        .attr("r",       (n) => n.id === d.id ? d.r + 3 : n.r);
+
+      bridges.forEach((bridge) => {
+        hoverLines.append("line")
+          .attr("x1", egoNode.x).attr("y1", egoNode.y)
+          .attr("x2", bridge.x).attr("y2", bridge.y)
+          .attr("stroke", palette.bridge).attr("stroke-width", 2.2)
+          .attr("stroke-opacity", 0.9).attr("stroke-linecap", "round");
+        hoverLines.append("line")
+          .attr("x1", bridge.x).attr("y1", bridge.y)
+          .attr("x2", d.x).attr("y2", d.y)
+          .attr("stroke", palette.second).attr("stroke-width", 2.2)
+          .attr("stroke-opacity", 0.9).attr("stroke-linecap", "round");
+      });
+    })
+    .on("mouseleave", function(event, d) {
+      if (d.group !== 2) return;
+      hoverLines.selectAll("*").remove();
+      nodeSel.attr("opacity", 1).attr("r", (n) => n.r);
+    })
+    .on("click", (event, d) => {
+      if (d.group !== 2) return;
+      finderState.selectedCandidate = d.data;
+      renderFinderScreen3(getFinderCase(), d.data);
+      const s3 = document.getElementById("finder-screen-3");
+      s3.classList.remove("finder-rise");
+      void s3.offsetWidth;
+      s3.classList.add("finder-rise");
+      document.getElementById("finder-screen-2").style.display = "none";
+      s3.style.display = "flex";
+    });
+
+  container.appendChild(svg.node());
+}
+
+function renderFinderScreen3(sc, candidate) {
+  const n = candidate.mutual_friends;
+  document.getElementById("finder-s3-title").textContent =
+    `${n} friend${n === 1 ? "" : "s"} in common — User ${sc.user.id} to User ${candidate.id}`;
+
+  // All bridge friends for this candidate, ranked by bridge_count
+  const bridges = sc.direct_friends
+    .filter((f) => (candidate.mutual_friend_ids || []).includes(f.id))
+    .sort((a, b) => b.bridge_count - a.bridge_count);
+
+  const SHOW = Math.min(bridges.length, 5);
+  const shown = bridges.slice(0, SHOW);
+
+  // ── SVG fan diagram ──────────────────────────────────────────────────
+  const visualEl = document.getElementById("finder-s3-visual");
+  visualEl.replaceChildren();
+
+  const W  = 660;
+  const GAP = 48;
+  const H  = Math.max(140, SHOW * GAP + 60);
+  const svg = createSvg(W, H);
+
+  const egoX  = W * 0.13;
+  const candX = W * 0.87;
+  const midX  = W * 0.5;
+  const cy    = H / 2;
+
+  // Bridge Y positions, evenly spread around centre
+  const totalSpan = (SHOW - 1) * GAP;
+  const bridgeYs  = shown.map((_, i) => cy - totalSpan / 2 + i * GAP);
+
+  // Lines first (behind nodes)
+  shown.forEach((_, i) => {
+    svg.appendChild(createLine(egoX, cy,         midX, bridgeYs[i], palette.first,  1.6, 0.65));
+    svg.appendChild(createLine(midX, bridgeYs[i], candX, cy,        palette.second, 1.6, 0.65));
+  });
+
+  // Ego
+  svg.appendChild(createCircle(egoX, cy, 20, palette.root));
+  svg.appendChild(createText(`User ${sc.user.id}`, egoX, cy + 30, "node-label", "middle"));
+  svg.appendChild(createText("(you)", egoX, cy + 43, "axis-label", "middle"));
+
+  // Candidate
+  svg.appendChild(createCircle(candX, cy, 17, palette.second));
+  svg.appendChild(createText(`User ${candidate.id}`, candX, cy + 30, "node-label", "middle"));
+  svg.appendChild(createText("new connection", candX, cy + 43, "axis-label", "middle"));
+
+  // Bridge nodes
+  shown.forEach((bridge, i) => {
+    const by = bridgeYs[i];
+    svg.appendChild(createCircle(midX, by, 13, palette.first));
+    svg.appendChild(createText(`User ${bridge.id}`, midX, by - 18, "axis-label", "middle"));
+  });
+
+  // "...and N more" label if truncated
+  if (bridges.length > SHOW) {
+    svg.appendChild(createText(
+      `...and ${bridges.length - SHOW} more path${bridges.length - SHOW === 1 ? "" : "s"}`,
+      midX, bridgeYs[SHOW - 1] + 26, "axis-label", "middle"
+    ));
+  }
+
+  visualEl.appendChild(svg);
+
+  // ── Text section ─────────────────────────────────────────────────────
+  const detailEl = document.getElementById("finder-s3-detail");
+  detailEl.replaceChildren();
+
+  const reasons = [];
+  if (candidate.same_country)   reasons.push("same country");
+  if (candidate.same_age_group) reasons.push("same age group");
+  if (candidate.same_gender)    reasons.push("same gender");
+  if (!reasons.length) reasons.push("shared network proximity");
+
+  // Summary card
+  const summary = document.createElement("div");
+  summary.className = "finder-bridge-card";
+  summary.innerHTML = `
+    <strong>${n} path${n === 1 ? "" : "s"} to this connection</strong>
+    <p>You share ${n} friend${n === 1 ? "" : "s"} in common with User ${candidate.id}, giving you ${n} way${n === 1 ? "" : "s"} to ask for an introduction. Strong match because of ${reasons.join(" and ")}.</p>
+    <div class="detail-meta" style="margin-top:10px">
+      <span class="chip blue">${n} mutual friend${n === 1 ? "" : "s"}</span>
+      <span class="chip alt">score ${candidate.score}</span>
+      ${candidate.same_country   ? '<span class="chip">same country</span>'    : ""}
+      ${candidate.same_age_group ? '<span class="chip alt">same age</span>'    : ""}
+      ${candidate.same_gender    ? '<span class="chip">same gender</span>'     : ""}
+    </div>`;
+  detailEl.appendChild(summary);
+
+  // One card per bridge path
+  bridges.forEach((bridge, i) => {
+    const card = document.createElement("div");
+    card.className = "finder-bridge-card";
+    card.innerHTML = `
+      <strong>Path ${i + 1} — via User ${bridge.id}</strong>
+      <p>${bridge.country || "unknown"} · ${bridge.age_group || "unknown"} · ${bridge.degree} connections</p>`;
+    detailEl.appendChild(card);
+  });
 }
 
 // ─── Formatters ───────────────────────────────────────────────────────────────

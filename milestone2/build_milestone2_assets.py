@@ -63,14 +63,19 @@ def top_country_counts(users: pd.DataFrame) -> pd.Series:
 
 
 def build_payload() -> dict[str, object]:
-    assets = load_second_degree_assets(ROOT)
+    assets = load_second_degree_assets(ROOT / "data")
     users = assets.users
     network = assets.network
 
     second_degree_summary = summarize_second_degree(users, assets.adjacency)
     friend_match = friend_attribute_match_rates(users, assets.adjacency)
     exemplar_ids = choose_exemplar_users(users, assets.adjacency, summary=second_degree_summary, max_cases=3)
-    exemplar_cases = [build_ego_case(user_id, users, assets.adjacency, top_n_candidates=16) for user_id in exemplar_ids]
+    exemplar_cases = []
+    for uid in exemplar_ids:
+        case = build_ego_case(uid, users, assets.adjacency, top_n_candidates=16)
+        large = build_ego_case(uid, users, assets.adjacency, top_n_candidates=50)
+        case["finder_candidates"] = large["candidates"]
+        exemplar_cases.append(case)
 
     degree_summary = users["degree"].describe(percentiles=[0.5, 0.9, 0.99])
     second_summary = second_degree_summary["second_degree_count"].describe(percentiles=[0.5, 0.9, 0.99])
@@ -154,6 +159,7 @@ def build_payload() -> dict[str, object]:
             "supported_filters": [
                 {"id": "same_country", "label": "Same country"},
                 {"id": "same_age_group", "label": "Same age group"},
+                {"id": "same_gender", "label": "Same gender"},
             ],
             "planned_filters": [
                 {
@@ -175,9 +181,7 @@ def main() -> None:
     payload = build_payload()
     serialized = json.dumps(payload, indent=2)
     OUTPUT_PATH.write_text(serialized, encoding="utf-8")
-    PROTOTYPE_DATA_PATH.write_text(f"window.MILESTONE_DATA = {serialized};\n", encoding="utf-8")
     print(f"Wrote {OUTPUT_PATH}")
-    print(f"Wrote {PROTOTYPE_DATA_PATH}")
 
 
 if __name__ == "__main__":
